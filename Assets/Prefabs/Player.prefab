@@ -175,6 +175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7546510948155054764}
     m_Modifications:
+    - target: {fileID: 1816286212892900709, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
+      propertyPath: m_VerticalDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -201,11 +205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015951848
+      value: -0.00000001595185
       objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000064496577
+      value: 0.000000006449659
       objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -230,7 +234,7 @@ PrefabInstance:
     - target: {fileID: 1816286213511414045, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6952897447931321151}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
 --- !u!4 &7546510946942569680 stripped
