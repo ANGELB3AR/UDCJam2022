@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerStateMachine : StateMachine
 {
     [field: SerializeField] public InputReader InputReader { get; private set; }
+    [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
     [field: SerializeField] public float RunningSpeed { get; private set; }
+    [field: SerializeField] public float JumpForce { get; private set; }
 
     void Start()
     {

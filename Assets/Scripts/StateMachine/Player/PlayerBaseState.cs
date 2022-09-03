@@ -10,4 +10,15 @@ public abstract class PlayerBaseState : State
     {
         this.stateMachine = stateMachine;
     }
+
+    public void Run(float deltaTime)
+    {
+        Vector3 movement = new Vector3();
+
+        movement.x = stateMachine.InputReader.MovementValue.x;
+        movement.y = 0f;
+        movement.z = stateMachine.RunningSpeed;
+
+        stateMachine.transform.Translate(movement * deltaTime * stateMachine.RunningSpeed);
+    }
 }

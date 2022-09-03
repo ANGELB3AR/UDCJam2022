@@ -8,22 +8,21 @@ public class PlayerRunningState : PlayerBaseState
 
     public override void Enter()
     {
-        
+        stateMachine.InputReader.JumpEvent += OnJump;
     }
 
     public override void Tick(float deltaTime)
     {
-        Vector3 movement = new Vector3();
-
-        movement.x = stateMachine.InputReader.MovementValue.x;
-        movement.y = 0f;
-        movement.z = stateMachine.RunningSpeed;
-
-        stateMachine.transform.Translate(movement * deltaTime * stateMachine.RunningSpeed);
+        Run(deltaTime);
     }
 
     public override void Exit()
     {
-        
+        stateMachine.InputReader.JumpEvent -= OnJump;
+    }
+
+    void OnJump()
+    {
+        stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
     }
 }
