@@ -400,10 +400,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7521311566592765271, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
-      propertyPath: <JumpForce>k__BackingField
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7546510946942569680, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.000000015951848
