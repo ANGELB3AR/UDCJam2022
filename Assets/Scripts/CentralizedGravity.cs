@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class CentralizedGravity : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    [SerializeField] int radius = 5;
-    [SerializeField] int forceAmount = 100;
-    [SerializeField] float gravity = 1f;
+    [SerializeField] Planet attractorPlanet;
     
-    Vector3 targetDirection;
     Rigidbody rb;
-    float distance;
 
     void Awake()
     {
@@ -20,27 +15,15 @@ public class CentralizedGravity : MonoBehaviour
 
     void Start()
     {
-        //Physics.gravity = new Vector3(0, gravity, 0);
-        
+        rb.useGravity = false;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        targetDirection = target.position - transform.position;
-        distance = targetDirection.magnitude;
-        targetDirection = targetDirection.normalized;
-
-        if (distance < radius)
+        if (attractorPlanet != null)
         {
-            rb.AddForce(targetDirection * forceAmount * Time.deltaTime);
+            attractorPlanet.Attract(transform);
         }
-
-        Physics.gravity = new Vector3(targetDirection.x, targetDirection.y * forceAmount * Time.deltaTime, targetDirection.z);
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
