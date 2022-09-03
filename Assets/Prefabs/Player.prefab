@@ -53,7 +53,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7546510948155054755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 7680898337383305978}
   <Rigidbody>k__BackingField: {fileID: 7546510948155054754}
   <RunningSpeed>k__BackingField: 5
-  <JumpForce>k__BackingField: 200
+  <JumpForce>k__BackingField: 300
 --- !u!114 &7680898337383305978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,11 +207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015951848
+      value: -0.00000001595185
       objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000064496577
+      value: 0.0000000064496586
       objectReference: {fileID: 0}
     - target: {fileID: 1816286213511414042, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

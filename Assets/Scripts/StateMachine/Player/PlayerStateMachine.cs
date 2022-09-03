@@ -8,9 +8,26 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
     [field: SerializeField] public float RunningSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
+    [HideInInspector] public bool IsGrounded { get; private set; }
 
     void Start()
     {
         SwitchState(new PlayerRunningState(this));
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            IsGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            IsGrounded = false;
+        }
     }
 }
