@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CentralizedGravity : MonoBehaviour
 {
-    [SerializeField] Planet attractorPlanet;
-    
+    Planet attractorPlanet;
     Rigidbody rb;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        attractorPlanet = FindObjectOfType<Planet>();
     }
 
     void Start()
