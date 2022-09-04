@@ -18,6 +18,6 @@ public abstract class EnemyBaseState : State
         Vector3 lookDirection = stateMachine.Player.transform.position - stateMachine.transform.position;
         lookDirection.y = 0f;
 
-        stateMachine.transform.rotation = Quaternion.LookRotation(lookDirection);
+        stateMachine.transform.rotation = Quaternion.LookRotation(lookDirection, stateMachine.transform.up);
     }
 }
