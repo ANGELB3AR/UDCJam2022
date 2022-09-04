@@ -28,9 +28,6 @@ public class PlayerJumpingState : PlayerBaseState
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }
-
-        Debug.Log("Player Jumping State");
-        Debug.Log(stateMachine.IsGrounded);
     }
 
     public override void Exit()

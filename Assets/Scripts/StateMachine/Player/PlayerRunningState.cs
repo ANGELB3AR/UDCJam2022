@@ -24,8 +24,6 @@ public class PlayerRunningState : PlayerBaseState
         Run(deltaTime);
 
         stateMachine.Animator.SetFloat(sprintDirectionHash, stateMachine.InputReader.MovementValue.x);
-
-        Debug.Log("Player Running State");
     }
 
     public override void Exit()
