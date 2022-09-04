@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Agent>k__BackingField: {fileID: -6840151863833128701}
   <Animator>k__BackingField: {fileID: 5125355798665547415}
+  <AttackRange>k__BackingField: 2
 --- !u!114 &250272318496174904
 MonoBehaviour:
   m_ObjectHideFlags: 0
