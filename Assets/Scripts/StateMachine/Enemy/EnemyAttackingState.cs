@@ -15,7 +15,7 @@ public class EnemyAttackingState : EnemyBaseState
 
     public override void Tick(float deltaTime)
     {
-        
+        FacePlayer();
     }
 
     public override void Exit()

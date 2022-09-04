@@ -37,4 +37,14 @@ public class EnemyChasingState : EnemyBaseState
         Vector3 playerPosition = stateMachine.Player.transform.position;
         stateMachine.transform.position = Vector3.MoveTowards(stateMachine.transform.position, playerPosition, stateMachine.ChaseSpeed);
     }
+
+    void FaceForward()
+    {
+        Vector3 movementDirection = stateMachine.Player.transform.position - stateMachine.transform.position;
+        movementDirection.y = 0f;
+
+        if (movementDirection == Vector3.zero) { return; }
+
+        stateMachine.transform.forward = movementDirection;
+    }
 }
