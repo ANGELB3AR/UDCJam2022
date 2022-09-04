@@ -26,7 +26,7 @@ public class PlayerJumpingState : PlayerBaseState
 
         if (stateMachine.IsGrounded)
         {
-            stateMachine.SwitchState(new PlayerRunningState(stateMachine));
+            stateMachine.SwitchState(new PlayerRollingState(stateMachine));
         }
     }
 
