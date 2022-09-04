@@ -54,7 +54,7 @@ MonoBehaviour:
   <Rigidbody>k__BackingField: {fileID: 7546510948155054754}
   <Animator>k__BackingField: {fileID: 6999090767346849739}
   <RunningSpeed>k__BackingField: 5
-  <JumpForce>k__BackingField: 5
+  <JumpForce>k__BackingField: 8
 --- !u!54 &7546510948155054754
 Rigidbody:
   m_ObjectHideFlags: 0
