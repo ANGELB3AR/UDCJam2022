@@ -12,6 +12,8 @@ public class PlayerJumpingState : PlayerBaseState
 
     public override void Enter()
     {
+        stateMachine.InputReader.AttackEvent += OnAttack;
+
         stateMachine.Rigidbody.AddRelativeForce(new Vector3(0, stateMachine.JumpForce, 0), ForceMode.Impulse);
 
         stateMachine.Animator.CrossFadeInFixedTime(jumpHash, crossFadeDuration);
@@ -28,5 +30,10 @@ public class PlayerJumpingState : PlayerBaseState
     public override void Exit()
     {
 
+    }
+
+    void OnAttack()
+    {
+        stateMachine.SwitchState(new PlayerJumpAttackingState(stateMachine));
     }
 }
