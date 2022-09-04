@@ -13,11 +13,20 @@ public class EnemyChasingState : EnemyBaseState
 
     public override void Tick(float deltaTime)
     {
-        
+        if (IsInAttackRange())
+        {
+            stateMachine.SwitchState(new EnemyAttackingState(stateMachine));
+        }
     }
 
     public override void Exit()
     {
         
+    }
+
+    bool IsInAttackRange()
+    {
+        float distanceToPlayer = Vector3.Distance(stateMachine.Player.transform.position, stateMachine.transform.position);
+        return distanceToPlayer <= stateMachine.AttackRange;
     }
 }
