@@ -24,6 +24,18 @@ public class PlayerStateMachine : StateMachine
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            SwitchState(new PlayerTrippingState(this));
+        }
+        else if (other.CompareTag("Weapon"))
+        {
+            SwitchState(new PlayerImpactState(this));
+        }
+    }
+
     public void SetIsGrounded(bool status)
     {
         IsGrounded = status;
