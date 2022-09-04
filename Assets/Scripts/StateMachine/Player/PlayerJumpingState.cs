@@ -15,21 +15,27 @@ public class PlayerJumpingState : PlayerBaseState
         stateMachine.InputReader.AttackEvent += OnAttack;
 
         stateMachine.Rigidbody.AddRelativeForce(new Vector3(0, stateMachine.JumpForce, 0), ForceMode.Impulse);
+        stateMachine.SetIsGrounded(false);
 
         stateMachine.Animator.CrossFadeInFixedTime(jumpHash, crossFadeDuration);
     }
 
     public override void Tick(float deltaTime)
     {
+        Run(deltaTime);
+
         if (stateMachine.IsGrounded)
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }
+
+        Debug.Log("Player Jumping State");
+        Debug.Log(stateMachine.IsGrounded);
     }
 
     public override void Exit()
     {
-
+        stateMachine.InputReader.AttackEvent -= OnAttack;
     }
 
     void OnAttack()

@@ -25,6 +25,8 @@ public class PlayerJumpAttackingState : PlayerBaseState
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }
+
+        Debug.Log("Player Jump Attacking State");
     }
 
     public override void Exit()

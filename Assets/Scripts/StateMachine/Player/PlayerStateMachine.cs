@@ -31,4 +31,9 @@ public class PlayerStateMachine : StateMachine
             IsGrounded = false;
         }
     }
+
+    public void SetIsGrounded(bool status)
+    {
+        IsGrounded = status;
+    }
 }
