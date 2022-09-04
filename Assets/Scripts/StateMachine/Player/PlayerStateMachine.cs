@@ -24,14 +24,6 @@ public class PlayerStateMachine : StateMachine
         }
     }
 
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            IsGrounded = false;
-        }
-    }
-
     public void SetIsGrounded(bool status)
     {
         IsGrounded = status;
