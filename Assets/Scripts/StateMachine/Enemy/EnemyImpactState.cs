@@ -13,6 +13,8 @@ public class EnemyImpactState : EnemyBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(impactHash, crossFadeDuration);
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Hit", stateMachine.transform.position);
     }
 
     public override void Tick(float deltaTime)
