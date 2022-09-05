@@ -162,6 +162,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FollowCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 1816286213511414045, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 4933853313329096504}
+    - target: {fileID: 1816286213511414045, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 4933853313329096504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9175517ae37cd43be4d809f6dca6a9, type: 3}
 --- !u!4 &5748698292115856156 stripped
