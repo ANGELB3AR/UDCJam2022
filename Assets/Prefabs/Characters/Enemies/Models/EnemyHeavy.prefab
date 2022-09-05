@@ -7593,6 +7593,7 @@ GameObject:
   - component: {fileID: 643894094933066906}
   - component: {fileID: 4730701980132145675}
   - component: {fileID: 4035153824618331665}
+  - component: {fileID: 3995507543058619598}
   m_Layer: 0
   m_Name: EnemyHeavy
   m_TagString: Untagged
@@ -9230,6 +9231,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider: {fileID: 4933199895497344465}
+--- !u!114 &3995507543058619598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700425568008056756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a98bf1c98e5fc747aae76df52e9e548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &700429229519668942
 GameObject:
   m_ObjectHideFlags: 0
