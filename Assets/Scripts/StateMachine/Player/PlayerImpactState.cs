@@ -21,7 +21,7 @@ public class PlayerImpactState : PlayerBaseState
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator, "Impact");
 
-        if (normalizedTime == 1f)
+        if (normalizedTime >= 1f)
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }

@@ -21,7 +21,7 @@ public class PlayerJumpAttackingState : PlayerBaseState
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator, "JumpAttack");
 
-        if (normalizedTime == 1f)
+        if (normalizedTime >= 1f)
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }

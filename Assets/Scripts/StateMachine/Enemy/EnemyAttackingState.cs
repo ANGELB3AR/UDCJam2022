@@ -16,7 +16,7 @@ public class EnemyAttackingState : EnemyBaseState
     {
         FacePlayer();
 
-        if (GetNormalizedTime(stateMachine.Animator, stateMachine.AttackAnimation) == 1)
+        if (GetNormalizedTime(stateMachine.Animator, stateMachine.AttackAnimation) >= 1)
         {
             if (stateMachine.Player.GetCurrentHealth() > 0)
             {
