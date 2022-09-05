@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Ground
   - Obstacle
-  - Player Weapon
-  - Enemy Weapon
+  - Weapon
   layers:
   - Default
   - TransparentFX
