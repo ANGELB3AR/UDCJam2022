@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 413268727501544192}
     m_Modifications:
+    - target: {fileID: 643894094933066906, guid: b3900593fc96be245ad385449795784b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ef8e6bb63a885194ab64260bf56acf1b, type: 2}
     - target: {fileID: 699173778046011502, guid: b3900593fc96be245ad385449795784b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,8 +59,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyMedium
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 643894094933066906, guid: b3900593fc96be245ad385449795784b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3900593fc96be245ad385449795784b, type: 3}
 --- !u!1001 &7959060542074950010
 PrefabInstance:
