@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7467346557576081271}
   - component: {fileID: 7477721775769375835}
   - component: {fileID: 7486590882096894281}
-  - component: {fileID: 7445866529787088949}
   - component: {fileID: 8260146816289880328}
+  - component: {fileID: 5207869428941689333}
   m_Layer: 6
   m_Name: PlayerWeapon
   m_TagString: Weapon
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7445866529787088949
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7472873325751512041}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43452431728921934, guid: 5e05935e8ddb88641b16d45026195367, type: 2}
 --- !u!114 &8260146816289880328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +98,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
+--- !u!136 &5207869428941689333
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472873325751512041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.090003684
+  m_Height: 0.71948385
+  m_Direction: 1
+  m_Center: {x: -1.10439464e-17, y: 0.42974353, z: 0.0046833977}

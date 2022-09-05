@@ -9229,7 +9229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525edf5b32cecc44ca10d17671c03ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponCollider: {fileID: 6586505569213026957}
+  weaponCollider: {fileID: 9035161763420796360}
 --- !u!1 &700429229519668942
 GameObject:
   m_ObjectHideFlags: 0
@@ -70898,13 +70898,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74bc716eb2b530e488193235a7807cb9, type: 3}
---- !u!64 &6586505569213026957 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 128135960917317666, guid: 74bc716eb2b530e488193235a7807cb9, type: 3}
-  m_PrefabInstance: {fileID: 6530444934153833135}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6598829722086729795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 86427913909035756, guid: 74bc716eb2b530e488193235a7807cb9, type: 3}
+  m_PrefabInstance: {fileID: 6530444934153833135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &9035161763420796360 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 2865304013490782055, guid: 74bc716eb2b530e488193235a7807cb9, type: 3}
   m_PrefabInstance: {fileID: 6530444934153833135}
   m_PrefabAsset: {fileID: 0}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 412836176061480573}
   - component: {fileID: 414401219099708311}
   - component: {fileID: 425309127705461429}
-  - component: {fileID: 382820000327667927}
   - component: {fileID: -2252106300418244450}
+  - component: {fileID: 5647290864789173213}
   m_Layer: 7
   m_Name: EnemyMediumWeapon
   m_TagString: Weapon
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &382820000327667927
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410086830687249059}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43394489828525544, guid: 953d65a70bf2b594dba8b82ac72e51e7, type: 2}
 --- !u!114 &-2252106300418244450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +98,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
+--- !u!136 &5647290864789173213
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410086830687249059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.11452441
+  m_Height: 1.1127181
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6473074, z: 0}

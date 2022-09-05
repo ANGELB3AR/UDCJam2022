@@ -22971,7 +22971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525edf5b32cecc44ca10d17671c03ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponCollider: {fileID: 4728310454096017632}
+  weaponCollider: {fileID: 7966107711599884576}
 --- !u!1 &3490598850383084875
 GameObject:
   m_ObjectHideFlags: 0
@@ -70832,6 +70832,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6875332850166508592}
     m_Modifications:
+    - target: {fileID: 7445866529787088949, guid: 840149ef81f925f41a5efcb7a59b9d4b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7467346557576081271, guid: 840149ef81f925f41a5efcb7a59b9d4b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -70903,8 +70907,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7467346557576081271, guid: 840149ef81f925f41a5efcb7a59b9d4b, type: 3}
   m_PrefabInstance: {fileID: 2795430690085578965}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &4728310454096017632 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 7445866529787088949, guid: 840149ef81f925f41a5efcb7a59b9d4b, type: 3}
+--- !u!136 &7966107711599884576 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 5207869428941689333, guid: 840149ef81f925f41a5efcb7a59b9d4b, type: 3}
   m_PrefabInstance: {fileID: 2795430690085578965}
   m_PrefabAsset: {fileID: 0}
