@@ -13,6 +13,8 @@ public class PlayerRollingState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(rollHash, crossFadeDuration);
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Roll", stateMachine.transform.position);
     }
 
     public override void Tick(float deltaTime)
