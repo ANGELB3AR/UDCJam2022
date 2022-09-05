@@ -11,7 +11,6 @@ public class PlayerStateMachine : StateMachine
 
     [field: SerializeField] public float RunningSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
-    [field: SerializeField] public int WeaponDamage { get; private set; }
     [HideInInspector] public bool IsGrounded { get; private set; }
 
     void OnEnable()
@@ -46,7 +45,7 @@ public class PlayerStateMachine : StateMachine
         else if (other.CompareTag("Weapon"))
         {
             SwitchState(new PlayerImpactState(this));
-            Health.ReceiveDamage(other.GetComponentInParent<EnemyStateMachine>().WeaponDamage);
+            Health.ReceiveDamage(other.GetComponent<DamageDealer>().damageAmount);
         }
     }
 

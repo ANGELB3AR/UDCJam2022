@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2614418864323875007}
   - component: {fileID: 2625106625635038593}
   - component: {fileID: 2656814163093395929}
+  - component: {fileID: 9170923843614975379}
   m_Layer: 7
   m_Name: EnemyHeavyWeapon
   m_TagString: Weapon
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43823519294894184, guid: f58e00cecb7f663489be55f5ec3b2786, type: 2}
+--- !u!114 &9170923843614975379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611706659932339315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e78843cca04c645b06714424f4e663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 30

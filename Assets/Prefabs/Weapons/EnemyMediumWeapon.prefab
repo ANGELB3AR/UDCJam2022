@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 414401219099708311}
   - component: {fileID: 425309127705461429}
   - component: {fileID: 382820000327667927}
+  - component: {fileID: -2252106300418244450}
   m_Layer: 7
   m_Name: EnemyMediumWeapon
   m_TagString: Weapon
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43394489828525544, guid: 953d65a70bf2b594dba8b82ac72e51e7, type: 2}
+--- !u!114 &-2252106300418244450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410086830687249059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e78843cca04c645b06714424f4e663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 20
