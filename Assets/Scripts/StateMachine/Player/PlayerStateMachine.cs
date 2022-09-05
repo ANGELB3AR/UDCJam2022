@@ -12,6 +12,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float RunningSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
     [HideInInspector] public bool IsGrounded { get; private set; }
+    [HideInInspector] public bool IsDead { get; private set; } = false;
 
     void OnEnable()
     {
@@ -56,6 +57,7 @@ public class PlayerStateMachine : StateMachine
 
     void HandleDeath()
     {
+        IsDead = true;
         SwitchState(new PlayerDyingState(this));
     }
 }

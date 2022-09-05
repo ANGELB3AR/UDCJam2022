@@ -21,7 +21,7 @@ public class PlayerTrippingState : PlayerBaseState
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator, "Trip");
 
-        if (normalizedTime >= 1f)
+        if (normalizedTime == 1f)
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }

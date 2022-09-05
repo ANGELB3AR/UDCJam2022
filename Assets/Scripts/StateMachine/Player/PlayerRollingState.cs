@@ -21,7 +21,7 @@ public class PlayerRollingState : PlayerBaseState
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator, "Roll");
 
-        if (normalizedTime >= 1f)
+        if (normalizedTime == 1f)
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }
