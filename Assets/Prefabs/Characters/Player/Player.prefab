@@ -57,7 +57,7 @@ MonoBehaviour:
   <RunningSpeed>k__BackingField: 3
   <StumblingSpeed>k__BackingField: 2
   <JumpForce>k__BackingField: 8
-  <TurnSpeed>k__BackingField: 3
+  <TurnSpeed>k__BackingField: 100
 --- !u!54 &7546510948155054754
 Rigidbody:
   m_ObjectHideFlags: 0

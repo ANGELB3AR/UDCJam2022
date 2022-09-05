@@ -18,6 +18,8 @@ public class PlayerJumpingState : PlayerBaseState
         stateMachine.SetIsGrounded(false);
 
         stateMachine.Animator.CrossFadeInFixedTime(jumpHash, crossFadeDuration);
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Jump", stateMachine.transform.position);
     }
 
     public override void Tick(float deltaTime)

@@ -13,6 +13,8 @@ public class EnemyDyingState : EnemyBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(deathHash, crossFadeDuration);
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/BodyDrop", stateMachine.transform.position);
     }
 
     public override void Tick(float deltaTime) { }
