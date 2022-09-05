@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackingState : PlayerBaseState
 {
-    readonly int spinAttackHash = Animator.StringToHash("SpinAttack");
+    readonly int attackHash = Animator.StringToHash("OtherAttack");
 
     const float crossFadeDuration = 0.1f;
 
@@ -12,14 +12,14 @@ public class PlayerAttackingState : PlayerBaseState
 
     public override void Enter()
     {
-        stateMachine.Animator.CrossFadeInFixedTime(spinAttackHash, crossFadeDuration);
+        stateMachine.Animator.CrossFadeInFixedTime(attackHash, crossFadeDuration);
     }
 
     public override void Tick(float deltaTime)
     {
         Run(deltaTime);
 
-        float normalizedTime = GetNormalizedTime(stateMachine.Animator, "SpinAttack");
+        float normalizedTime = GetNormalizedTime(stateMachine.Animator, "OtherAttack");
 
         if (normalizedTime >= 1f)
         {

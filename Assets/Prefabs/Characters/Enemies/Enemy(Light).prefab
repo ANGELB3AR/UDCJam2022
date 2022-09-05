@@ -117,5 +117,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyLight
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 643894094933066906, guid: 4b8ef17b7f29523499d601c3514d3692, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4b8ef17b7f29523499d601c3514d3692, type: 3}

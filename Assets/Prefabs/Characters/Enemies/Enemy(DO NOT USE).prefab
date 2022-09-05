@@ -65,7 +65,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7488f006f6fac42adcda1e39788b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityUp: {x: 0, y: 0, z: 0}
 --- !u!114 &9035473699409790410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 8208772204874884747}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef8e6bb63a885194ab64260bf56acf1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -55,7 +55,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHeavy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 643894094933066906, guid: e2308ad729dfc5447a184f83242ef4d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2308ad729dfc5447a184f83242ef4d3, type: 3}
 --- !u!1001 &6865374382591989659
 PrefabInstance:
