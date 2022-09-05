@@ -7,8 +7,11 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
+    [field: SerializeField] public Health Health { get; private set; }
+
     [field: SerializeField] public float RunningSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
+    [field: SerializeField] public int WeaponDamage { get; private set; }
     [HideInInspector] public bool IsGrounded { get; private set; }
 
     void Start()

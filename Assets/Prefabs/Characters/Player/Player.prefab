@@ -54,8 +54,10 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 7680898337383305978}
   <Rigidbody>k__BackingField: {fileID: 7546510948155054754}
   <Animator>k__BackingField: {fileID: 6999090767346849739}
-  <RunningSpeed>k__BackingField: 3
+  <Health>k__BackingField: {fileID: 2250126639295831100}
+  <RunningSpeed>k__BackingField: 3.5
   <JumpForce>k__BackingField: 8
+  <WeaponDamage>k__BackingField: 0
 --- !u!54 &7546510948155054754
 Rigidbody:
   m_ObjectHideFlags: 0
