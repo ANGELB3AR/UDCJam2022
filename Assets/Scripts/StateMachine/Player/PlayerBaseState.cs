@@ -15,10 +15,18 @@ public abstract class PlayerBaseState : State
     {
         Vector3 movement = new Vector3();
 
-        movement.x = stateMachine.InputReader.MovementValue.x * stateMachine.TurnSpeed;
+        movement.x = 0f; ;
         movement.y = 0f;
         movement.z = speed;
 
         stateMachine.transform.Translate(movement * deltaTime * speed);
+
+        Vector3 rotation = new Vector3();
+
+        rotation.x = 0f;
+        rotation.y = stateMachine.InputReader.MovementValue.x;
+        rotation.z = 0f;
+
+        stateMachine.transform.Rotate(rotation * deltaTime * stateMachine.TurnSpeed);
     }
 }
