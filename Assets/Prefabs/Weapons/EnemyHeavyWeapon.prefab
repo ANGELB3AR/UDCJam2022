@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2614418864323875007}
   - component: {fileID: 2625106625635038593}
   - component: {fileID: 2656814163093395929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyHeavyWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
