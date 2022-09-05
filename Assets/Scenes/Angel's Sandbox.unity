@@ -593,6 +593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4049667759888226842, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7546510946942569680, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.00000001595185
@@ -648,6 +652,10 @@ PrefabInstance:
     - target: {fileID: 7546510948155054765, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883318637253604019, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caa8fcbfd811d76479cdece2bc4066d3, type: 3}
