@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class EnemyChasingState : EnemyBaseState
 {
+    readonly int locomotionBlendTreeHash = Animator.StringToHash("LocomotionBlendTree");
+    readonly int speedHash = Animator.StringToHash("Speed");
+
+    const float crossFadeDuration = 0.1f;
+
     public EnemyChasingState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
-        
+        stateMachine.Animator.CrossFadeInFixedTime(locomotionBlendTreeHash, crossFadeDuration);
+        stateMachine.Animator.SetFloat(speedHash, stateMachine.LocomotionSpeed);
     }
 
     public override void Tick(float deltaTime)

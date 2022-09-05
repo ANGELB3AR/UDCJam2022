@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
+      propertyPath: <AttackAnimation>k__BackingField
+      value: LightAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
+      propertyPath: <LocomotionSpeed>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7766592604991736442, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
       propertyPath: m_RootOrder
       value: 0
