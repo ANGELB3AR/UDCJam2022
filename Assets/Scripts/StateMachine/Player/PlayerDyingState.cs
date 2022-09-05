@@ -15,13 +15,7 @@ public class PlayerDyingState : PlayerBaseState
         stateMachine.Animator.CrossFadeInFixedTime(deathHash, crossFadeDuration);
     }
 
-    public override void Tick(float deltaTime)
-    {
+    public override void Tick(float deltaTime) { }
 
-    }
-
-    public override void Exit()
-    {
-
-    }
+    public override void Exit() { }
 }

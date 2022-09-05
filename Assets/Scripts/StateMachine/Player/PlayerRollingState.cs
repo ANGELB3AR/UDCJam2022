@@ -27,8 +27,5 @@ public class PlayerRollingState : PlayerBaseState
         }
     }
 
-    public override void Exit()
-    {
-        
-    }
+    public override void Exit() { }
 }

@@ -15,10 +15,7 @@ public class EnemyIdleState : EnemyBaseState
         stateMachine.Animator.CrossFadeInFixedTime(idleHash, crossFadeDuration);
     }
 
-    public override void Tick(float deltaTime)
-    {
-        
-    }
+    public override void Tick(float deltaTime) { }
 
     public override void Exit()
     {
