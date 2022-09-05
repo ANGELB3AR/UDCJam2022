@@ -15,11 +15,21 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public int WeaponDamage { get; private set; }
     [HideInInspector] public Health Player { get; private set; }
 
+    void OnEnable()
+    {
+        Health.OnDeath += HandleDeath;
+    }
+
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
 
         SwitchState(new EnemyChasingState(this));
+    }
+
+    void OnDisable()
+    {
+        Health.OnDeath -= HandleDeath;
     }
 
     void OnTriggerEnter(Collider other)
@@ -28,5 +38,10 @@ public class EnemyStateMachine : StateMachine
         {
             SwitchState(new EnemyImpactState(this));
         }
+    }
+
+    void HandleDeath()
+    {
+        SwitchState(new EnemyDyingState(this));
     }
 }

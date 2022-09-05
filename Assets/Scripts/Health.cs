@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public event Action OnDeath;
+
+    [SerializeField] int maxHealth = 50;
+
+    int currentHealth;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public int GetCurrentHealth()
     {
-        
+        return currentHealth;
+    }
+
+    public void ReceiveDamage(int damage)
+    {
+        if (currentHealth == 0) { return; }
+
+        currentHealth = Mathf.Max(currentHealth - damage, 0);
+
+        if (currentHealth == 0)
+        {
+            OnDeath?.Invoke();
+        }
     }
 }

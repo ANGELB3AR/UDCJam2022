@@ -14,9 +14,19 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public int WeaponDamage { get; private set; }
     [HideInInspector] public bool IsGrounded { get; private set; }
 
+    void OnEnable()
+    {
+        Health.OnDeath += HandleDeath;
+    }
+
     void Start()
     {
         SwitchState(new PlayerRunningState(this));
+    }
+
+    void OnDisable()
+    {
+        Health.OnDeath -= HandleDeath;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -42,5 +52,10 @@ public class PlayerStateMachine : StateMachine
     public void SetIsGrounded(bool status)
     {
         IsGrounded = status;
+    }
+
+    void HandleDeath()
+    {
+        SwitchState(new PlayerDyingState(this));
     }
 }
