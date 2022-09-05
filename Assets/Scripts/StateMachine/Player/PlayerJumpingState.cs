@@ -22,7 +22,7 @@ public class PlayerJumpingState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        Run(deltaTime);
+        Run(deltaTime, stateMachine.RunningSpeed);
 
         if (stateMachine.IsGrounded)
         {

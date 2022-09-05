@@ -17,7 +17,7 @@ public class PlayerAttackingState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        Run(deltaTime);
+        Run(deltaTime, stateMachine.RunningSpeed);
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator, "OtherAttack");
 

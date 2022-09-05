@@ -55,8 +55,8 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 6999090767346849739}
   <Health>k__BackingField: {fileID: 2250126639295831100}
   <RunningSpeed>k__BackingField: 3
+  <StumblingSpeed>k__BackingField: 1.5
   <JumpForce>k__BackingField: 8
-  <WeaponDamage>k__BackingField: 20
 --- !u!54 &7546510948155054754
 Rigidbody:
   m_ObjectHideFlags: 0

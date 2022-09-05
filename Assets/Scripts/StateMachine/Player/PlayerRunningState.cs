@@ -21,7 +21,7 @@ public class PlayerRunningState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        Run(deltaTime);
+        Run(deltaTime, stateMachine.RunningSpeed);
 
         stateMachine.Animator.SetFloat(sprintDirectionHash, stateMachine.InputReader.MovementValue.x);
     }

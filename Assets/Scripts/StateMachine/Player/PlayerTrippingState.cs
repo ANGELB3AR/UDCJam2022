@@ -17,7 +17,7 @@ public class PlayerTrippingState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        Run(deltaTime);
+        Run(deltaTime, stateMachine.StumblingSpeed);
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator, "Trip");
 
