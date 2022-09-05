@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Ground
   - Obstacle
-  - Weapon
+  - Player Weapon
+  - Enemy Weapon
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player Weapon
+  - Enemy Weapon
+  - Player
+  - Enemy
   - 
   - 
   - 
