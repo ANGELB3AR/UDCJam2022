@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerImpactState : PlayerBaseState
+public class EnemyImpactState : EnemyBaseState
 {
     readonly int impactHash = Animator.StringToHash("Impact");
 
     const float crossFadeDuration = 0.1f;
 
-    public PlayerImpactState(PlayerStateMachine stateMachine) : base(stateMachine) { }
+    public EnemyImpactState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
@@ -17,13 +17,9 @@ public class PlayerImpactState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        Run(deltaTime);
-
-        float normalizedTime = GetNormalizedTime(stateMachine.Animator, "Impact");
-
-        if (normalizedTime >= 1f)
+        if (GetNormalizedTime(stateMachine.Animator, "Impact") >= 1)
         {
-            stateMachine.SwitchState(new PlayerRunningState(stateMachine));
+            stateMachine.SwitchState(new EnemyChasingState(stateMachine));
         }
     }
 

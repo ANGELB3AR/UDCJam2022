@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDyingState : PlayerBaseState
+public class EnemyDyingState : EnemyBaseState
 {
     readonly int deathHash = Animator.StringToHash("Death");
 
     const float crossFadeDuration = 0.1f;
 
-    public PlayerDyingState(PlayerStateMachine stateMachine) : base(stateMachine) { }
+    public EnemyDyingState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
