@@ -12,6 +12,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5092093291857459663}
     - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
+      propertyPath: <WeaponDamage>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
       propertyPath: <AttackAnimation>k__BackingField
       value: LightAttack
       objectReference: {fileID: 0}
