@@ -19,4 +19,12 @@ public class EnemyStateMachine : StateMachine
 
         SwitchState(new EnemyChasingState(this));
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Weapon"))
+        {
+            SwitchState(new EnemyImpactState(this));
+        }
+    }
 }
