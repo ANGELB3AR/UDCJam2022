@@ -15,7 +15,7 @@ public abstract class PlayerBaseState : State
     {
         Vector3 movement = new Vector3();
 
-        movement.x = stateMachine.InputReader.MovementValue.x;
+        movement.x = stateMachine.InputReader.MovementValue.x * stateMachine.TurnSpeed;
         movement.y = 0f;
         movement.z = speed;
 
