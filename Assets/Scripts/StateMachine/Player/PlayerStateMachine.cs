@@ -10,6 +10,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Health Health { get; private set; }
 
     [field: SerializeField] public float RunningSpeed { get; private set; }
+    [field: SerializeField] public float AttackingSpeed { get; private set; }
     [field: SerializeField] public float StumblingSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public float TurnSpeed { get; private set; }
