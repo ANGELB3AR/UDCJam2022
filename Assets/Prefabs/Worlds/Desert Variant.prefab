@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7019122731991811239
+--- !u!1001 &5252443040346120451
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,12 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7252713044797466113, guid: 6331a77894158ea40a46069c19d0df36, type: 3}
       propertyPath: m_Name
-      value: World 1
+      value: Desert Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7252713044797466115, guid: 6331a77894158ea40a46069c19d0df36, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d63e69dac90d82347b65f997857186df, type: 2}
+      objectReference: {fileID: 2100000, guid: ed2770253e470f5468bf9a8ac256391e, type: 2}
     - target: {fileID: 7252713044797466125, guid: 6331a77894158ea40a46069c19d0df36, type: 3}
       propertyPath: m_RootOrder
       value: 0
