@@ -22973,7 +22973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider: {fileID: 7966107711599884576}
-  areaOfEffect: {fileID: 0}
+  areaOfEffect: {fileID: 3757715116201410989}
+  AOEParticles: {fileID: 198793745104055882, guid: 032358ff93954a0418f5ca1cb47617cb, type: 3}
 --- !u!114 &7267736564918752289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70932,6 +70933,11 @@ PrefabInstance:
 --- !u!4 &3646626315265646192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4181667704189517849, guid: da8624910e18d5a41b574b623f6b7d3b, type: 3}
+  m_PrefabInstance: {fileID: 617890140973473385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3757715116201410989 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 4374466599864606660, guid: da8624910e18d5a41b574b623f6b7d3b, type: 3}
   m_PrefabInstance: {fileID: 617890140973473385}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2795430690085578965

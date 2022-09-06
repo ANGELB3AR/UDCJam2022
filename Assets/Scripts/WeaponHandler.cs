@@ -10,6 +10,9 @@ public class WeaponHandler : MonoBehaviour
 
     [SerializeField] Collider weaponCollider;
     [SerializeField] Collider areaOfEffect = null;
+    [SerializeField] ParticleSystem AOEParticles = null;
+
+    ParticleSystem particleInstance;
 
     public void EnableWeapon()
     {
@@ -24,10 +27,22 @@ public class WeaponHandler : MonoBehaviour
     public void EnableAOE()
     {
         areaOfEffect.enabled = true;
+        ActivateAOEParticles();
     }
 
     public void DisableAOE()
     {
         areaOfEffect.enabled = false;
+        DeactivateAOEParticles();
+    }
+
+    void ActivateAOEParticles()
+    {
+        particleInstance = Instantiate(AOEParticles, areaOfEffect.transform);
+    }
+
+    void DeactivateAOEParticles()
+    {
+        Destroy(particleInstance);
     }
 }

@@ -15,6 +15,9 @@ public class EnemyDyingState : EnemyBaseState
         stateMachine.Animator.CrossFadeInFixedTime(deathHash, crossFadeDuration);
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/BodyDrop", stateMachine.transform.position);
+
+        Collider myCollider = stateMachine.GetComponent<Collider>();
+        myCollider.enabled = false;
     }
 
     public override void Tick(float deltaTime) { }
