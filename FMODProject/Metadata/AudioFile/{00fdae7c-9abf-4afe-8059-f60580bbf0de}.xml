@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{00fdae7c-9abf-4afe-8059-f60580bbf0de}">
+		<property name="assetPath">
+			<value>Heavy Game Punch 19.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.7355833333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{507dcb92-8f35-42fe-a631-929cc36d1cb2}</destination>
+		</relationship>
+	</object>
+</objects>

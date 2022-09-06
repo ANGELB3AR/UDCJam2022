@@ -22973,6 +22973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider: {fileID: 7966107711599884576}
+  areaOfEffect: {fileID: 8082012495586831013, guid: da8624910e18d5a41b574b623f6b7d3b, type: 3}
+  AOETime: 2.5
 --- !u!114 &7267736564918752289
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,10 @@ public class WeaponHandler : MonoBehaviour
     /// </summary>
 
     [SerializeField] Collider weaponCollider;
+    [SerializeField] GameObject areaOfEffect = null;
+    [SerializeField] float AOETime = 2.5f;
+
+    GameObject AOEInstance;
 
     public void EnableWeapon()
     {
@@ -18,5 +22,22 @@ public class WeaponHandler : MonoBehaviour
     public void DisableWeapon()
     {
         weaponCollider.enabled = false;
+    }
+
+    public void EnableAOE()
+    {
+        AOEInstance = Instantiate(areaOfEffect, transform.position, Quaternion.identity);
+        StartCoroutine(AOETimer());
+    }
+
+    void DisableAOE()
+    {
+        Destroy(AOEInstance);
+    }
+
+    IEnumerator AOETimer()
+    {
+        yield return new WaitForSeconds(AOETime);
+        DisableAOE();
     }
 }

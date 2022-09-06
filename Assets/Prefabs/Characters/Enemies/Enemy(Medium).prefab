@@ -61,6 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3900593fc96be245ad385449795784b, type: 3}
+--- !u!136 &3467210084559325554 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 4205390545628091522, guid: b3900593fc96be245ad385449795784b, type: 3}
+  m_PrefabInstance: {fileID: 739308698580377072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7959060542074950010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,6 +77,10 @@ PrefabInstance:
       propertyPath: <WeaponDamage>k__BackingField
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
+      propertyPath: <weaponCollider>k__BackingField
+      value: 
+      objectReference: {fileID: 3467210084559325554}
     - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
       propertyPath: <AttackAnimation>k__BackingField
       value: MediumAttack

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerStateMachine : StateMachine
 {
@@ -42,6 +43,8 @@ public class PlayerStateMachine : StateMachine
 
     void OnTriggerEnter(Collider other)
     {
+        if (IsDead) { return; }
+
         if (other.CompareTag("Obstacle"))
         {
             SwitchState(new PlayerTrippingState(this));

@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
 {
     public event Action OnDeath;
 
+    public bool isInvincible = false;
+
     [SerializeField] int maxHealth = 50;
 
     int currentHealth;
@@ -24,6 +26,7 @@ public class Health : MonoBehaviour
     public void ReceiveDamage(int damage)
     {
         if (currentHealth == 0) { return; }
+        if (isInvincible) { return; }
 
         currentHealth = Mathf.Max(currentHealth - damage, 0);
         Debug.Log($"{gameObject.name} received {damage} damage");
@@ -32,5 +35,10 @@ public class Health : MonoBehaviour
         {
             OnDeath?.Invoke();
         }
+    }
+
+    public void SetInvincible(bool status)
+    {
+        isInvincible = status;
     }
 }
