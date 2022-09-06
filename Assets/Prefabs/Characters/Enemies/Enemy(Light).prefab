@@ -16,6 +16,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
+      propertyPath: <weaponCollider>k__BackingField
+      value: 
+      objectReference: {fileID: 3685767875333081245}
+    - target: {fileID: -2245354848629282152, guid: 9c92b27af2083d74386d2d1ecdefd1e0, type: 3}
       propertyPath: <AttackAnimation>k__BackingField
       value: LightAttack
       objectReference: {fileID: 0}
@@ -139,6 +143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8ef17b7f29523499d601c3514d3692, type: 3}
+--- !u!136 &3685767875333081245 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 9035161763420796360, guid: 4b8ef17b7f29523499d601c3514d3692, type: 3}
+  m_PrefabInstance: {fileID: 5639964248355716437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &5092093291857459663 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 643894094933066906, guid: 4b8ef17b7f29523499d601c3514d3692, type: 3}

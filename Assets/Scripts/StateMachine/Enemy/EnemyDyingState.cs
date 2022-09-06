@@ -16,8 +16,7 @@ public class EnemyDyingState : EnemyBaseState
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/BodyDrop", stateMachine.transform.position);
 
-        Collider myCollider = stateMachine.GetComponent<Collider>();
-        myCollider.enabled = false;
+        stateMachine.weaponCollider.enabled = false;
     }
 
     public override void Tick(float deltaTime) { }

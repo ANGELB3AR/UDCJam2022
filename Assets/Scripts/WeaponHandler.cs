@@ -9,10 +9,10 @@ public class WeaponHandler : MonoBehaviour
     /// </summary>
 
     [SerializeField] Collider weaponCollider;
-    [SerializeField] Collider areaOfEffect = null;
-    [SerializeField] ParticleSystem AOEParticles = null;
+    [SerializeField] GameObject areaOfEffect = null;
+    [SerializeField] float AOETime = 2.5f;
 
-    ParticleSystem particleInstance;
+    GameObject AOEInstance;
 
     public void EnableWeapon()
     {
@@ -26,23 +26,18 @@ public class WeaponHandler : MonoBehaviour
 
     public void EnableAOE()
     {
-        areaOfEffect.enabled = true;
-        ActivateAOEParticles();
+        AOEInstance = Instantiate(areaOfEffect, transform.position, Quaternion.identity);
+        StartCoroutine(AOETimer());
     }
 
-    public void DisableAOE()
+    void DisableAOE()
     {
-        areaOfEffect.enabled = false;
-        DeactivateAOEParticles();
+        Destroy(AOEInstance);
     }
 
-    void ActivateAOEParticles()
+    IEnumerator AOETimer()
     {
-        particleInstance = Instantiate(AOEParticles, areaOfEffect.transform);
-    }
-
-    void DeactivateAOEParticles()
-    {
-        Destroy(particleInstance);
+        yield return new WaitForSeconds(AOETime);
+        DisableAOE();
     }
 }
