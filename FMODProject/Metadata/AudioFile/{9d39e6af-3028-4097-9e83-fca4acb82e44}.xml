@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9d39e6af-3028-4097-9e83-fca4acb82e44}">
+		<property name="assetPath">
+			<value>Club 6.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.2693424036281179</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{507dcb92-8f35-42fe-a631-929cc36d1cb2}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -23,4 +23,9 @@ public class CombatAudio : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/EnemySwordSwings", transform.position);
     }
+
+    public void PlayJumpAttack()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/JumpAttack", transform.position);
+    }
 }
