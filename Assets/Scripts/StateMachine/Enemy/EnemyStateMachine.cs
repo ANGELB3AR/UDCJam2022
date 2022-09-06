@@ -17,6 +17,7 @@ public class EnemyStateMachine : StateMachine
     void OnEnable()
     {
         Health.OnDeath += HandleDeath;
+        Player.OnDeath += HandlePlayerDeath;
     }
 
     private void Start()
@@ -29,6 +30,7 @@ public class EnemyStateMachine : StateMachine
     void OnDisable()
     {
         Health.OnDeath -= HandleDeath;
+        Player.OnDeath += HandlePlayerDeath;
     }
 
     void OnTriggerEnter(Collider other)
@@ -43,5 +45,12 @@ public class EnemyStateMachine : StateMachine
     void HandleDeath()
     {
         SwitchState(new EnemyDyingState(this));
+    }
+
+    void HandlePlayerDeath()
+    {
+        if (Health.GetCurrentHealth() == 0) { return; }
+
+        SwitchState(new EnemyIdleState(this));
     }
 }
