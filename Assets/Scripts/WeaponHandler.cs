@@ -9,6 +9,7 @@ public class WeaponHandler : MonoBehaviour
     /// </summary>
 
     [SerializeField] Collider weaponCollider;
+    [SerializeField] Collider areaOfEffect = null;
 
     public void EnableWeapon()
     {
@@ -18,5 +19,15 @@ public class WeaponHandler : MonoBehaviour
     public void DisableWeapon()
     {
         weaponCollider.enabled = false;
+    }
+
+    public void EnableAOE()
+    {
+        areaOfEffect.enabled = true;
+    }
+
+    public void DisableAOE()
+    {
+        areaOfEffect.enabled = false;
     }
 }
