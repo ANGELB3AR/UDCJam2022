@@ -15,8 +15,6 @@ public class PlayerImpactState : PlayerBaseState
         stateMachine.Animator.CrossFadeInFixedTime(impactHash, crossFadeDuration);
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Hit", stateMachine.transform.position);
-
-        stateMachine.Health.SetInvincible(true);
     }
 
     public override void Tick(float deltaTime)
@@ -28,6 +26,11 @@ public class PlayerImpactState : PlayerBaseState
         if (normalizedTime >= 1f)
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
+        }
+
+        if (!stateMachine.Health.isInvincible)
+        {
+            stateMachine.Health.SetInvincible(true);
         }
     }
 
