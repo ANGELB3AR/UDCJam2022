@@ -39,6 +39,6 @@ public class EnemyChasingState : EnemyBaseState
     void ChasePlayer()
     {
         Vector3 playerPosition = stateMachine.Player.transform.position;
-        stateMachine.transform.position = Vector3.MoveTowards(stateMachine.transform.position, playerPosition, stateMachine.ChaseSpeed);
+        stateMachine.transform.position = Vector3.MoveTowards(stateMachine.transform.position, playerPosition, stateMachine.ChaseSpeed * Time.deltaTime);
     }
 }
