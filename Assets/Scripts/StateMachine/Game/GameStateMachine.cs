@@ -30,4 +30,14 @@ public class GameStateMachine : StateMachine
     {
         SwitchState(new GameOverState(this));
     }
+
+    public void ResumeGame()
+    {
+        SwitchState(new GamePlayingState(this));
+    }
+
+    public void LoadMainMenu()
+    {
+        SwitchState(new GameMenuState(this));
+    }
 }

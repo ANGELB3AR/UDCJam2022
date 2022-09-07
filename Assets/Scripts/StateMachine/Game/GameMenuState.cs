@@ -8,6 +8,8 @@ public class GameMenuState : GameBaseState
 
     public override void Enter()
     {
+        stateMachine.LevelManager.LoadMainMenu();
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
