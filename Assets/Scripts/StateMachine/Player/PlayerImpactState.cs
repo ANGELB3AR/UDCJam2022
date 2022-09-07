@@ -27,11 +27,6 @@ public class PlayerImpactState : PlayerBaseState
         {
             stateMachine.SwitchState(new PlayerRunningState(stateMachine));
         }
-
-        if (!stateMachine.Health.isInvincible)
-        {
-            stateMachine.Health.SetInvincible(true);
-        }
     }
 
     public override void Exit() 
