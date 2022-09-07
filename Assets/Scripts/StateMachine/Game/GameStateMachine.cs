@@ -6,6 +6,7 @@ public class GameStateMachine : StateMachine
 {
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public LevelManager LevelManager { get; private set; }
+    [field: SerializeField] public GameObject PauseMenu { get; private set; }
 
     [HideInInspector] public Health Player { get; private set; }
 
@@ -17,6 +18,8 @@ public class GameStateMachine : StateMachine
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+
+        PauseMenu.SetActive(false);
 
         SwitchState(new GamePlayingState(this));
     }
@@ -39,5 +42,11 @@ public class GameStateMachine : StateMachine
     public void LoadMainMenu()
     {
         SwitchState(new GameMenuState(this));
+    }
+
+    public void PlayGame()
+    {
+        LevelManager.LoadLevel(1);
+        SwitchState(new GamePlayingState(this));
     }
 }

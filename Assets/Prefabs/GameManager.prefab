@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <InputReader>k__BackingField: {fileID: 5285276309092123201}
   <LevelManager>k__BackingField: {fileID: 2266391997346533609}
+  <PauseMenu>k__BackingField: {fileID: 5734935594939766143, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
 --- !u!114 &5285276309092123201
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class GamePausedState : GameBaseState
     {
         stateMachine.InputReader.PauseEvent += OnPause;
 
+        stateMachine.PauseMenu.SetActive(true);
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
@@ -24,6 +26,8 @@ public class GamePausedState : GameBaseState
     public override void Exit()
     {
         stateMachine.InputReader.PauseEvent -= OnPause;
+
+        stateMachine.PauseMenu.SetActive(false);
     }
 
     void OnPause()
