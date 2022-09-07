@@ -8,7 +8,7 @@ public class GameOverState : GameBaseState
 
     public override void Enter()
     {
-
+        Time.timeScale = 1;
     }
 
     public override void Tick(float deltaTime)

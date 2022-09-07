@@ -8,7 +8,10 @@ public class GameMenuState : GameBaseState
 
     public override void Enter()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
 
+        Time.timeScale = 1;
     }
 
     public override void Tick(float deltaTime)

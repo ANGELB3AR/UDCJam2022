@@ -10,6 +10,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     
     public event Action JumpEvent;
     public event Action AttackEvent;
+    public event Action PauseEvent;
 
     Controls controls;
 
@@ -42,5 +43,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         if (!context.performed) { return; }
 
         AttackEvent?.Invoke();
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (!context.performed) { return; }
+
+        PauseEvent?.Invoke();
     }
 }

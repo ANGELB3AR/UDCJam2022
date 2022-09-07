@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238216313140067561}
   - component: {fileID: 6126721815387059330}
+  - component: {fileID: 5285276309092123201}
   - component: {fileID: 2266391997346533609}
   m_Layer: 0
   m_Name: GameManager
@@ -45,7 +46,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e031178a0aab9174aab26083c141b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InputReader>k__BackingField: {fileID: 5285276309092123201}
   <LevelManager>k__BackingField: {fileID: 2266391997346533609}
+--- !u!114 &5285276309092123201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829305420984220590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025c6dd2c8a07f145bbbb300ace46b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2266391997346533609
 MonoBehaviour:
   m_ObjectHideFlags: 0
