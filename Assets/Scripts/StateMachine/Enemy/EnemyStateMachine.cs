@@ -36,6 +36,8 @@ public class EnemyStateMachine : StateMachine
 
     void OnTriggerEnter(Collider other)
     {
+        if (Health.GetCurrentHealth() == 0) { return; }
+
         if (other.CompareTag("Weapon"))
         {
             SwitchState(new EnemyImpactState(this));
