@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class GameStateMachine : StateMachine
 {
+    [field: SerializeField] public LevelManager LevelManager { get; private set; }
 }
