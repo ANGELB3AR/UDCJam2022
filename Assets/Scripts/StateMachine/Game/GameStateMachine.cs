@@ -6,4 +6,9 @@ public class GameStateMachine : StateMachine
 {
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public LevelManager LevelManager { get; private set; }
+
+    private void Start()
+    {
+        SwitchState(new GamePlayingState(this));
+    }
 }
