@@ -7,9 +7,15 @@ public class GameStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public LevelManager LevelManager { get; private set; }
     [field: SerializeField] public GameObject PauseMenu { get; private set; }
-    [field: SerializeField] public GameObject GameOverScreen { get; private set; }
+    [field: SerializeField] public GameObject GameOverMenu { get; private set; }
 
     [HideInInspector] public Health Player { get; private set; }
+
+    private void Awake()
+    {
+        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+    }
 
     void OnEnable()
     {
