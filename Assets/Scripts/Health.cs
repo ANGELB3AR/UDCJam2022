@@ -33,6 +33,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth == 0)
         {
+            print(gameObject.name + " has died");
             OnDeath?.Invoke();
         }
     }

@@ -8,26 +8,32 @@ public class HUD : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI enemyCountText;
 
+    EnemyStateMachine[] enemies;
     int enemyCount;
+
+    void Awake()
+    {
+        enemies = FindObjectsOfType<EnemyStateMachine>();
+    }
 
     void Start()
     {
-        CountEnemies();
+        enemyCount = enemies.Length;
     }
 
-    void Update()
+    private void Update()
     {
-        CountEnemies();
         DisplayEnemyCount();
-    }
-
-    void CountEnemies()
-    {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     void DisplayEnemyCount()
     {
         enemyCountText.text = "Enemies Remaining: " + enemyCount.ToString();
+    }
+
+    public void Recount()
+    {
+        enemyCount--;
+        print($"Recounted and found {enemyCount} enemies remaining");
     }
 }
