@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &348750088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4452586911148624, guid: 7b84683c77802a74e94f461386c4bb60, type: 3}
+  m_PrefabInstance: {fileID: 1831757128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &666232351
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133345481465830, guid: 41cb659555c7a9c4bb0482150158796e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4133345481465830, guid: 41cb659555c7a9c4bb0482150158796e, type: 3}
       propertyPath: m_LocalScale.x
@@ -311,13 +316,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 64194952022246530, guid: 41cb659555c7a9c4bb0482150158796e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 41cb659555c7a9c4bb0482150158796e, type: 3}
---- !u!43 &820648564
+--- !u!43 &920228181
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-57190
+  m_Name: pb_Mesh-254200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -484,7 +489,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4933853313517312247, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4933853313517312247, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -716,13 +721,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265680060}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.97, z: 0}
-  m_LocalScale: {x: 6.2, y: 1, z: 6.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.6750002, z: 0}
+  m_LocalScale: {x: 15.5, y: 2.5, z: 15.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 348750088}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590735786
 GameObject:
@@ -836,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4452586911148624, guid: 7b84683c77802a74e94f461386c4bb60, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4452586911148624, guid: 7b84683c77802a74e94f461386c4bb60, type: 3}
       propertyPath: m_LocalScale.x
