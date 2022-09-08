@@ -63,7 +63,7 @@ public class GameStateMachine : StateMachine
 
     public void PlayGame()
     {
-        LevelManager.LoadLevel(1);
+        LevelManager.LoadLevel(2);
         SwitchState(new GamePlayingState(this));
     }
 
