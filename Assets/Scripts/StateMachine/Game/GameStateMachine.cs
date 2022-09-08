@@ -66,4 +66,9 @@ public class GameStateMachine : StateMachine
         LevelManager.LoadLevel(1);
         SwitchState(new GamePlayingState(this));
     }
+
+    public void FindHUD()
+    {
+        HUD = FindObjectOfType<HUD>();
+    }
 }
