@@ -15,7 +15,7 @@ public class GamePlayingState : GameBaseState
 
         Time.timeScale = 1;
 
-        stateMachine.FindHUD();
+        stateMachine.FindTemporaryObjects();
     }
 
     public override void Tick(float deltaTime)
