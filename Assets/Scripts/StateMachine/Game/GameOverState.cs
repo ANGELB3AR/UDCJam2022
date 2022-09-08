@@ -9,6 +9,8 @@ public class GameOverState : GameBaseState
     public override void Enter()
     {
         Time.timeScale = 1;
+
+        stateMachine.GameOverScreen.SetActive(true);
     }
 
     public override void Tick(float deltaTime)
@@ -18,6 +20,6 @@ public class GameOverState : GameBaseState
 
     public override void Exit()
     {
-
+        stateMachine.GameOverScreen.SetActive(false);
     }
 }
