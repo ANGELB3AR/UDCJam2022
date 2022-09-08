@@ -14,6 +14,13 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public float LocomotionSpeed { get; private set; }
     [field: SerializeField] public string AttackAnimation { get; private set; }
     [HideInInspector] public Health Player { get; private set; }
+    [HideInInspector] public HUD HUD { get; private set; }
+
+    void Awake()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        HUD = FindObjectOfType<HUD>();
+    }
 
     void OnEnable()
     {
@@ -23,8 +30,6 @@ public class EnemyStateMachine : StateMachine
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-
         SwitchState(new EnemyChasingState(this));
     }
 

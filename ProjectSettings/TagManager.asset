@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Obstacle
   - Weapon
+  - PauseMenu
+  - GameOverMenu
+  - Enemy
   layers:
   - Default
   - TransparentFX

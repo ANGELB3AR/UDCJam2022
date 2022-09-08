@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6126721815387059330}
   - component: {fileID: 5285276309092123201}
   - component: {fileID: 2266391997346533609}
+  - component: {fileID: -6977067261835942842}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,6 +50,8 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 5285276309092123201}
   <LevelManager>k__BackingField: {fileID: 2266391997346533609}
   <PauseMenu>k__BackingField: {fileID: 0}
+  <GameOverMenu>k__BackingField: {fileID: 0}
+  <HUD>k__BackingField: {fileID: 0}
 --- !u!114 &5285276309092123201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,5 +74,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 240aa64feddf7a446b77858114e68578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6977067261835942842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829305420984220590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce7109ac4512f84894c3a8ec95391c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

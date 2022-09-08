@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8133572473554768290}
   m_Layer: 9
   m_Name: Enemy(DO NOT USE)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,10 +51,9 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 0}
   <Gravity>k__BackingField: {fileID: 250272318496174904}
   <Health>k__BackingField: {fileID: 9035473699409790410}
-  <myCollider>k__BackingField: {fileID: 8133572473554768290}
   <weaponCollider>k__BackingField: {fileID: 0}
   <AttackRange>k__BackingField: 4
-  <ChaseSpeed>k__BackingField: 0.05
+  <ChaseSpeed>k__BackingField: 5
   <LocomotionSpeed>k__BackingField: 0
   <AttackAnimation>k__BackingField: 
 --- !u!114 &250272318496174904

@@ -8,7 +8,12 @@ public class GameOverState : GameBaseState
 
     public override void Enter()
     {
-        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0;
+
+        stateMachine.GameOverMenu.SetActive(true);
     }
 
     public override void Tick(float deltaTime)
@@ -18,6 +23,6 @@ public class GameOverState : GameBaseState
 
     public override void Exit()
     {
-
+        stateMachine.GameOverMenu.SetActive(false);
     }
 }
