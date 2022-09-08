@@ -14,6 +14,8 @@ public class PlayerImpactState : PlayerBaseState
     {
         stateMachine.Animator.CrossFadeInFixedTime(impactHash, crossFadeDuration);
 
+        stateMachine.Health.SetInvincible(true);
+
         FMODUnity.RuntimeManager.PlayOneShot("event:/Hit", stateMachine.transform.position);
     }
 

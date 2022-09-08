@@ -51,8 +51,8 @@ public class PlayerStateMachine : StateMachine
         }
         else if (other.CompareTag("Weapon"))
         {
-            SwitchState(new PlayerImpactState(this));
             Health.ReceiveDamage(other.GetComponent<DamageDealer>().damageAmount);
+            SwitchState(new PlayerImpactState(this));
         }
     }
 
