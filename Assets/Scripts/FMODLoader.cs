@@ -74,3 +74,4 @@ public class FMODLoader : MonoBehaviour
             yield return null;
         }
     }
+}
