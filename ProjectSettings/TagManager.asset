@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - PauseMenu
   - GameOverMenu
+  - Enemy
   layers:
   - Default
   - TransparentFX
