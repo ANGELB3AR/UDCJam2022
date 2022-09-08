@@ -49,7 +49,8 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 5285276309092123201}
   <LevelManager>k__BackingField: {fileID: 2266391997346533609}
   <PauseMenu>k__BackingField: {fileID: 0}
-  <GameOverScreen>k__BackingField: {fileID: 0}
+  <GameOverMenu>k__BackingField: {fileID: 0}
+  <HUD>k__BackingField: {fileID: 0}
 --- !u!114 &5285276309092123201
 MonoBehaviour:
   m_ObjectHideFlags: 0

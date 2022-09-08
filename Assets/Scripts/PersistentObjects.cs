@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersistentObjectSpawner : MonoBehaviour
+public class PersistentObjects : MonoBehaviour
 {
-    [SerializeField] GameObject[] persistentObjects;
-
     void Awake()
     {
         ManageSingleton();
@@ -24,19 +22,6 @@ public class PersistentObjectSpawner : MonoBehaviour
         else
         {
             DontDestroyOnLoad(gameObject);
-        }
-    }
-
-    void Start()
-    {
-        SpawnObjects();
-    }
-
-    void SpawnObjects()
-    {
-        foreach (GameObject persistentObject in persistentObjects)
-        {
-            Instantiate(persistentObject, transform);
         }
     }
 }
