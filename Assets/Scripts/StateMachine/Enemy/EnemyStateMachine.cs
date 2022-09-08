@@ -15,6 +15,11 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public string AttackAnimation { get; private set; }
     [HideInInspector] public Health Player { get; private set; }
 
+    void Awake()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+    }
+
     void OnEnable()
     {
         Health.OnDeath += HandleDeath;
@@ -23,8 +28,6 @@ public class EnemyStateMachine : StateMachine
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-
         SwitchState(new EnemyChasingState(this));
     }
 

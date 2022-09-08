@@ -13,8 +13,7 @@ public class GameStateMachine : StateMachine
 
     private void Awake()
     {
-        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
-        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
 
     void OnEnable()
@@ -24,9 +23,11 @@ public class GameStateMachine : StateMachine
 
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
 
         PauseMenu.SetActive(false);
+        GameOverMenu.SetActive(false);
 
         SwitchState(new GamePlayingState(this));
     }
