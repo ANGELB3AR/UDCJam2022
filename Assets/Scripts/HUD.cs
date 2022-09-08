@@ -6,6 +6,8 @@ using System;
 
 public class HUD : MonoBehaviour
 {
+    public event Action OnPlayerWin;
+
     [SerializeField] TextMeshProUGUI enemyCountText;
 
     EnemyStateMachine[] enemies;
@@ -19,10 +21,6 @@ public class HUD : MonoBehaviour
     void Start()
     {
         enemyCount = enemies.Length;
-    }
-
-    private void Update()
-    {
         DisplayEnemyCount();
     }
 
@@ -35,5 +33,11 @@ public class HUD : MonoBehaviour
     {
         enemyCount--;
         print($"Recounted and found {enemyCount} enemies remaining");
+        DisplayEnemyCount();
+
+        if (enemyCount == 0)
+        {
+            OnPlayerWin?.Invoke();
+        }
     }
 }
