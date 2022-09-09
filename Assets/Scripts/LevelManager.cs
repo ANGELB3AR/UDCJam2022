@@ -5,12 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public int currentLevel;
+    public int firstLevel = 2;
+    public bool gameLoaded = false;
+
     int mainMenu = 1;
-    int firstLevel = 2;
     int lastLevel;
+
     void Start()
     {
         lastLevel = SceneManager.sceneCountInBuildSettings;
+    }
+
+    void Update()
+    {
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentLevel == firstLevel)
+        {
+            gameLoaded = true;
+        }
     }
 
     public void QuitGame()

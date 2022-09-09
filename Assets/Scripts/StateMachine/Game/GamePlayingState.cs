@@ -8,6 +8,8 @@ public class GamePlayingState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Playing");
+
         stateMachine.FindTemporaryObjects();
 
         stateMachine.InputReader.PauseEvent += OnPause;
@@ -18,8 +20,6 @@ public class GamePlayingState : GameBaseState
         Cursor.visible = false;
 
         Time.timeScale = 1;
-
-        Debug.Log("Game Playing");
     }
 
     public override void Tick(float deltaTime)

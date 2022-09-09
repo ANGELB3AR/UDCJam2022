@@ -17,6 +17,12 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float TurnSpeed { get; private set; }
     [HideInInspector] public bool IsGrounded { get; private set; }
     [HideInInspector] public bool IsDead { get; private set; } = false;
+    bool isAwake = false;
+
+    private void Awake()
+    {
+        isAwake = true;
+    }
 
     void OnEnable()
     {

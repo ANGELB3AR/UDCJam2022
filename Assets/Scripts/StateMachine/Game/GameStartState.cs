@@ -8,16 +8,21 @@ public class GameStartState : GameBaseState
 
     public override void Enter()
     {
-        stateMachine.LevelManager.StartGame();
-
         Debug.Log("Game Start");
 
+        stateMachine.LevelManager.StartGame();
+
         stateMachine.SwitchState(new GamePlayingState(stateMachine));
+
+        stateMachine.GameLoadRoutine();
     }
 
     public override void Tick(float deltaTime)
     {
-        
+        if (stateMachine.LevelManager.currentLevel == stateMachine.LevelManager.firstLevel)
+        {
+            stateMachine.SwitchState(new GamePlayingState(stateMachine));
+        }
     }
 
     public override void Exit()

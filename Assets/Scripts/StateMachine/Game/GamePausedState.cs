@@ -8,6 +8,8 @@ public class GamePausedState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Paused");
+
         stateMachine.InputReader.PauseEvent += OnPause;
 
         stateMachine.PauseMenu.SetActive(true);
@@ -16,8 +18,6 @@ public class GamePausedState : GameBaseState
         Cursor.visible = true;
 
         Time.timeScale = 0;
-
-        Debug.Log("Game Paused");
     }
 
     public override void Tick(float deltaTime)

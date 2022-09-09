@@ -8,14 +8,14 @@ public class GameMenuState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Menu");
+
         stateMachine.LevelManager.LoadMainMenu();
 
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
         Time.timeScale = 1;
-
-        Debug.Log("Game Menu");
     }
 
     public override void Tick(float deltaTime)

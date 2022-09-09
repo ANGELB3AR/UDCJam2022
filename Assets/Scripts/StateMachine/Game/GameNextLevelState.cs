@@ -8,14 +8,14 @@ public class GameNextLevelState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Next Level");
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
         Time.timeScale = 0;
 
         stateMachine.NextLevelMenu.SetActive(true);
-
-        Debug.Log("Game Next Level");
     }
 
     public override void Tick(float deltaTime)

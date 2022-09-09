@@ -8,14 +8,14 @@ public class GameOverState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Over");
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
         Time.timeScale = 0;
 
         stateMachine.GameOverMenu.SetActive(true);
-
-        Debug.Log("Game Over");
     }
 
     public override void Tick(float deltaTime)
