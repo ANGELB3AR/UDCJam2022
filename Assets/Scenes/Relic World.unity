@@ -276,6 +276,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerRig
       objectReference: {fileID: 0}
+    - target: {fileID: 4933853314117413701, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Grey (Loopable)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933853314117413701, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933853314117413701, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 608508625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933853314117413701, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1307767465
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933853314117413701, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -1736798810
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933853314117413701, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -2098061985
+      objectReference: {fileID: 0}
     - target: {fileID: 5748698292115856156, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 20.5
