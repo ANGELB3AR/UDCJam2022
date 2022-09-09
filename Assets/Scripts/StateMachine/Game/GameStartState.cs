@@ -10,12 +10,12 @@ public class GameStartState : GameBaseState
     {
         stateMachine.LevelManager.StartGame();
 
-        stateMachine.SwitchState(new GamePlayingState(stateMachine));
+        Debug.Log("Game Start");
     }
 
     public override void Tick(float deltaTime)
     {
-        
+        stateMachine.SwitchState(new GamePlayingState(stateMachine));
     }
 
     public override void Exit()
