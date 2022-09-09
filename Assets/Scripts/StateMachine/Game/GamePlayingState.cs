@@ -14,6 +14,8 @@ public class GamePlayingState : GameBaseState
         Cursor.visible = false;
 
         Time.timeScale = 1;
+
+        stateMachine.FindTemporaryObjects();
     }
 
     public override void Tick(float deltaTime)
