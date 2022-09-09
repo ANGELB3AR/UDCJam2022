@@ -13,8 +13,6 @@ public class GameStartState : GameBaseState
         stateMachine.LevelManager.StartGame();
 
         stateMachine.SwitchState(new GamePlayingState(stateMachine));
-
-        stateMachine.GameLoadRoutine();
     }
 
     public override void Tick(float deltaTime)
@@ -27,6 +25,6 @@ public class GameStartState : GameBaseState
 
     public override void Exit()
     {
-        
+        stateMachine.GameLoadRoutine();
     }
 }

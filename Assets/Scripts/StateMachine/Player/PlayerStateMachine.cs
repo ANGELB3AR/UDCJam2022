@@ -18,6 +18,7 @@ public class PlayerStateMachine : StateMachine
     [HideInInspector] public bool IsGrounded { get; private set; }
     [HideInInspector] public bool IsDead { get; private set; } = false;
     bool isAwake = false;
+    bool isEnabled = false;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class PlayerStateMachine : StateMachine
 
     void OnEnable()
     {
+        isEnabled = true;
         Health.OnDeath += HandleDeath;
     }
 

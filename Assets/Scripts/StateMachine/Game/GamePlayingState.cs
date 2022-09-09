@@ -10,16 +10,16 @@ public class GamePlayingState : GameBaseState
     {
         Debug.Log("Game Playing");
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        Time.timeScale = 1;
+
         stateMachine.FindTemporaryObjects();
 
         stateMachine.InputReader.PauseEvent += OnPause;
         stateMachine.Player.OnDeath += HandlePlayerDeath;
         stateMachine.HUD.OnPlayerWin += HandlePlayerWin;
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        Time.timeScale = 1;
     }
 
     public override void Tick(float deltaTime)
