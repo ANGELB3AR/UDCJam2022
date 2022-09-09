@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6330934521209710996}
   - component: {fileID: 1132690034029344960}
   m_Layer: 0
-  m_Name: PersistentObjectSpawner
+  m_Name: PersistentObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5222177999811198588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.70824, y: 33.46255, z: 6.6793475}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
