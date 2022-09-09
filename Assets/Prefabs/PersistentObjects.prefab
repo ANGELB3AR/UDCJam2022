@@ -474,6 +474,11 @@ PrefabInstance:
       objectReference: {fileID: 7563703994173985237}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+--- !u!1 &7966640604459920165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2150058745432792501, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+  m_PrefabInstance: {fileID: 8311879517991286416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7966640604459920169 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2150058745432792505, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
@@ -542,6 +547,10 @@ PrefabInstance:
       propertyPath: <GameOverMenu>k__BackingField
       value: 
       objectReference: {fileID: 533367108568429377}
+    - target: {fileID: 6126721815387059330, guid: 2d358b7b11d18164b82220c9c9c3f85a, type: 3}
+      propertyPath: <NextLevelMenu>k__BackingField
+      value: 
+      objectReference: {fileID: 7966640604459920165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d358b7b11d18164b82220c9c9c3f85a, type: 3}
 --- !u!114 &2486556752298472894 stripped

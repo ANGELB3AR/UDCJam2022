@@ -10,9 +10,9 @@ public class GameStateMachine : StateMachine
     [field: SerializeField] public GameObject GameOverMenu { get; private set; }
     [field: SerializeField] public GameObject NextLevelMenu { get; private set; }
 
-    [field: SerializeField] public HUD HUD { get; private set; } = null;
+    [field: SerializeField] public HUD HUD { get; private set; }
 
-    [HideInInspector] public Health Player { get; private set; } = null;
+    [HideInInspector] public Health Player { get; private set; }
 
     private void Awake()
     {
@@ -48,6 +48,7 @@ public class GameStateMachine : StateMachine
     public void FindTemporaryObjects()
     {
         HUD = FindObjectOfType<HUD>();
+        Player = FindObjectOfType<PlayerStateMachine>().GetComponent<Health>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
 }

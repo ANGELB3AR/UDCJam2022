@@ -50,6 +50,7 @@ MonoBehaviour:
   <LevelManager>k__BackingField: {fileID: 2266391997346533609}
   <PauseMenu>k__BackingField: {fileID: 0}
   <GameOverMenu>k__BackingField: {fileID: 0}
+  <NextLevelMenu>k__BackingField: {fileID: 0}
   <HUD>k__BackingField: {fileID: 0}
 --- !u!114 &5285276309092123201
 MonoBehaviour:
@@ -75,3 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240aa64feddf7a446b77858114e68578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
+  firstLevel: 2
+  gameLoaded: 0
