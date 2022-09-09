@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     int mainMenu = 1;
-    int lastLevel = SceneManager.sceneCountInBuildSettings;
+    int firstLevel = 2;
+    int lastLevel;
+    void Start()
+    {
+        lastLevel = SceneManager.sceneCountInBuildSettings;
+    }
 
     public void QuitGame()
     {
@@ -18,9 +23,20 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
     }
 
+    public void StartGame()
+    {
+        LoadLevel(firstLevel);
+    }
+
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
+    }
+
+    public void ReloadLevel()
+    {
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentLevel);
     }
 
     public void LoadNextLevel()

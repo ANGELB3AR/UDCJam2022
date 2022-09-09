@@ -8,6 +8,8 @@ public class GameStateMachine : StateMachine
     [field: SerializeField] public LevelManager LevelManager { get; private set; }
     [field: SerializeField] public GameObject PauseMenu { get; private set; }
     [field: SerializeField] public GameObject GameOverMenu { get; private set; }
+    [field: SerializeField] public GameObject NextLevelMenu { get; private set; }
+
     [field: SerializeField] public HUD HUD { get; private set; } = null;
 
     [HideInInspector] public Health Player { get; private set; } = null;
@@ -28,11 +30,13 @@ public class GameStateMachine : StateMachine
     {
         PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+        NextLevelMenu = GameObject.FindGameObjectWithTag("NextLevelMenu");
 
         PauseMenu.SetActive(false);
         GameOverMenu.SetActive(false);
+        NextLevelMenu.SetActive(false);
 
-        SwitchState(new GamePlayingState(this));
+        SwitchState(new GameMenuState(this));
     }
 
     void OnDisable()
@@ -48,7 +52,7 @@ public class GameStateMachine : StateMachine
 
     void HandlePlayerWin()
     {
-        SwitchState(new GameOverState(this));
+        SwitchState(new GameNextLevelState(this));
     }
 
     public void ResumeGame()
@@ -63,7 +67,7 @@ public class GameStateMachine : StateMachine
 
     public void PlayGame()
     {
-        LevelManager.LoadLevel(2);
+        LevelManager.StartGame();
         SwitchState(new GamePlayingState(this));
     }
 

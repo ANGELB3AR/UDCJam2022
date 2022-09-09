@@ -10,6 +10,7 @@ TagManager:
   - PauseMenu
   - GameOverMenu
   - Enemy
+  - NextLevelMenu
   layers:
   - Default
   - TransparentFX
