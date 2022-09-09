@@ -20,11 +20,6 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
-
-        if (currentLevel == firstLevel)
-        {
-            gameLoaded = true;
-        }
     }
 
     public void QuitGame()

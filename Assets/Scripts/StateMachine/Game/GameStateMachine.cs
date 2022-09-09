@@ -50,16 +50,4 @@ public class GameStateMachine : StateMachine
         HUD = FindObjectOfType<HUD>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
-
-    public void GameLoadRoutine()
-    {
-        StartCoroutine(WaitUntilGameLoaded());
-    }
-
-    IEnumerator WaitUntilGameLoaded()
-    {
-        FindObjectOfType<GameStateMachine>().gameObject.SetActive(true);
-        yield return new WaitUntil(() => LevelManager.gameLoaded);
-        SwitchState(new GamePlayingState(this));
-    }
 }
