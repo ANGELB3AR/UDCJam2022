@@ -8,6 +8,8 @@ public class GamePausedState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Paused");
+
         stateMachine.InputReader.PauseEvent += OnPause;
 
         stateMachine.PauseMenu.SetActive(true);

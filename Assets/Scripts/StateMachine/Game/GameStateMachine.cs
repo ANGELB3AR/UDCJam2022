@@ -8,47 +8,26 @@ public class GameStateMachine : StateMachine
     [field: SerializeField] public LevelManager LevelManager { get; private set; }
     [field: SerializeField] public GameObject PauseMenu { get; private set; }
     [field: SerializeField] public GameObject GameOverMenu { get; private set; }
-    [field: SerializeField] public HUD HUD { get; private set; } = null;
+    [field: SerializeField] public GameObject NextLevelMenu { get; private set; }
 
-    [HideInInspector] public Health Player { get; private set; } = null;
+    [field: SerializeField] public HUD HUD { get; private set; }
+
+    [HideInInspector] public Health Player { get; private set; }
 
     private void Awake()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        HUD = FindObjectOfType<HUD>();
-    }
-
-    void OnEnable()
-    {
-        Player.OnDeath += HandlePlayerDeath;
-        HUD.OnPlayerWin += HandlePlayerWin;
+        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+        NextLevelMenu = GameObject.FindGameObjectWithTag("NextLevelMenu");
     }
 
     void Start()
     {
-        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
-        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
-
         PauseMenu.SetActive(false);
         GameOverMenu.SetActive(false);
+        NextLevelMenu.SetActive(false);
 
-        SwitchState(new GamePlayingState(this));
-    }
-
-    void OnDisable()
-    {
-        Player.OnDeath -= HandlePlayerDeath;
-        HUD.OnPlayerWin -= HandlePlayerWin;
-    }
-
-    void HandlePlayerDeath()
-    {
-        SwitchState(new GameOverState(this));
-    }
-
-    void HandlePlayerWin()
-    {
-        SwitchState(new GameOverState(this));
+        SwitchState(new GameMenuState(this));
     }
 
     public void ResumeGame()
@@ -63,13 +42,13 @@ public class GameStateMachine : StateMachine
 
     public void PlayGame()
     {
-        LevelManager.LoadLevel(2);
-        SwitchState(new GamePlayingState(this));
+        SwitchState(new GameStartState(this));
     }
 
     public void FindTemporaryObjects()
     {
         HUD = FindObjectOfType<HUD>();
+        Player = FindObjectOfType<PlayerStateMachine>().GetComponent<Health>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
 }

@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameMenuState : GameBaseState
+public class GameNextLevelState : GameBaseState
 {
-    public GameMenuState(GameStateMachine stateMachine) : base(stateMachine) { }
+    public GameNextLevelState(GameStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
-        Debug.Log("Game Menu");
-
-        stateMachine.LevelManager.LoadMainMenu();
+        Debug.Log("Game Next Level");
 
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
-        Time.timeScale = 1;
+        Time.timeScale = 0;
+
+        stateMachine.NextLevelMenu.SetActive(true);
     }
 
     public override void Tick(float deltaTime)
@@ -25,6 +25,7 @@ public class GameMenuState : GameBaseState
 
     public override void Exit()
     {
-
+        stateMachine.NextLevelMenu.SetActive(false);
     }
+
 }

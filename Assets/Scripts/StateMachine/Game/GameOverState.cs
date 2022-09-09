@@ -8,6 +8,8 @@ public class GameOverState : GameBaseState
 
     public override void Enter()
     {
+        Debug.Log("Game Over");
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
