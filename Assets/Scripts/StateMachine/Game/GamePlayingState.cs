@@ -8,6 +8,8 @@ public class GamePlayingState : GameBaseState
 
     public override void Enter()
     {
+        stateMachine.FindTemporaryObjects();
+
         stateMachine.InputReader.PauseEvent += OnPause;
         stateMachine.Player.OnDeath += HandlePlayerDeath;
         stateMachine.HUD.OnPlayerWin += HandlePlayerWin;
@@ -16,8 +18,6 @@ public class GamePlayingState : GameBaseState
         Cursor.visible = false;
 
         Time.timeScale = 1;
-
-        stateMachine.FindTemporaryObjects();
 
         Debug.Log("Game Playing");
     }
@@ -51,5 +51,4 @@ public class GamePlayingState : GameBaseState
     {
         stateMachine.SwitchState(new GameNextLevelState(stateMachine));
     }
-
 }
