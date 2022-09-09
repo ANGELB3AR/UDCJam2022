@@ -9,6 +9,8 @@ public class GamePlayingState : GameBaseState
     public override void Enter()
     {
         stateMachine.InputReader.PauseEvent += OnPause;
+        stateMachine.Player.OnDeath += HandlePlayerDeath;
+        stateMachine.HUD.OnPlayerWin += HandlePlayerWin;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -26,10 +28,23 @@ public class GamePlayingState : GameBaseState
     public override void Exit()
     {
         stateMachine.InputReader.PauseEvent -= OnPause;
+        stateMachine.Player.OnDeath -= HandlePlayerDeath;
+        stateMachine.HUD.OnPlayerWin -= HandlePlayerWin;
     }
 
     void OnPause()
     {
         stateMachine.SwitchState(new GamePausedState(stateMachine));
     }
+
+    void HandlePlayerDeath()
+    {
+        stateMachine.SwitchState(new GameOverState(stateMachine));
+    }
+
+    void HandlePlayerWin()
+    {
+        stateMachine.SwitchState(new GameNextLevelState(stateMachine));
+    }
+
 }

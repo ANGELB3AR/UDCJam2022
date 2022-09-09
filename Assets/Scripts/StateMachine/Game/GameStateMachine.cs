@@ -16,43 +16,18 @@ public class GameStateMachine : StateMachine
 
     private void Awake()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        HUD = FindObjectOfType<HUD>();
-    }
-
-    void OnEnable()
-    {
-        Player.OnDeath += HandlePlayerDeath;
-        HUD.OnPlayerWin += HandlePlayerWin;
+        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+        NextLevelMenu = GameObject.FindGameObjectWithTag("NextLevelMenu");
     }
 
     void Start()
     {
-        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
-        GameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
-        NextLevelMenu = GameObject.FindGameObjectWithTag("NextLevelMenu");
-
         PauseMenu.SetActive(false);
         GameOverMenu.SetActive(false);
         NextLevelMenu.SetActive(false);
 
         SwitchState(new GameMenuState(this));
-    }
-
-    void OnDisable()
-    {
-        Player.OnDeath -= HandlePlayerDeath;
-        HUD.OnPlayerWin -= HandlePlayerWin;
-    }
-
-    void HandlePlayerDeath()
-    {
-        SwitchState(new GameOverState(this));
-    }
-
-    void HandlePlayerWin()
-    {
-        SwitchState(new GameNextLevelState(this));
     }
 
     public void ResumeGame()
