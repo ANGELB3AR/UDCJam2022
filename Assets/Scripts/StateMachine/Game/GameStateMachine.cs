@@ -42,8 +42,7 @@ public class GameStateMachine : StateMachine
 
     public void PlayGame()
     {
-        LevelManager.StartGame();
-        SwitchState(new GamePlayingState(this));
+        SwitchState(new GameStartState(this));
     }
 
     public void FindTemporaryObjects()

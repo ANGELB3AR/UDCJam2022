@@ -14,6 +14,8 @@ public class GameNextLevelState : GameBaseState
         Time.timeScale = 0;
 
         stateMachine.NextLevelMenu.SetActive(true);
+
+        Debug.Log("Game Next Level");
     }
 
     public override void Tick(float deltaTime)

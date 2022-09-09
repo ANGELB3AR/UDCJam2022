@@ -18,11 +18,16 @@ public class GamePlayingState : GameBaseState
         Time.timeScale = 1;
 
         stateMachine.FindTemporaryObjects();
+
+        Debug.Log("Game Playing");
     }
 
     public override void Tick(float deltaTime)
     {
-        
+        if (stateMachine.Player == null || stateMachine.HUD == null)
+        {
+            stateMachine.FindTemporaryObjects();
+        }
     }
 
     public override void Exit()

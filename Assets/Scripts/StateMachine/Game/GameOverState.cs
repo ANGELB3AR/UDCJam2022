@@ -14,6 +14,8 @@ public class GameOverState : GameBaseState
         Time.timeScale = 0;
 
         stateMachine.GameOverMenu.SetActive(true);
+
+        Debug.Log("Game Over");
     }
 
     public override void Tick(float deltaTime)

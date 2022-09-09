@@ -16,6 +16,8 @@ public class GamePausedState : GameBaseState
         Cursor.visible = true;
 
         Time.timeScale = 0;
+
+        Debug.Log("Game Paused");
     }
 
     public override void Tick(float deltaTime)

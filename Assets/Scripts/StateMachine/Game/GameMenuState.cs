@@ -14,6 +14,8 @@ public class GameMenuState : GameBaseState
         Cursor.visible = true;
 
         Time.timeScale = 1;
+
+        Debug.Log("Game Menu");
     }
 
     public override void Tick(float deltaTime)
