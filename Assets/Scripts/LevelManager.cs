@@ -28,14 +28,14 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(mainMenu);
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadSceneAsync(mainMenu);
+        currentLevel = mainMenu;
     }
 
     public void StartGame()
     {
         LoadLevel(firstLevel);
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
+        currentLevel = firstLevel;
     }
 
     public void ReloadLevel()
@@ -45,7 +45,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        int nextLevel = currentLevel + 1;
 
         if (nextLevel > lastLevel)
         {
@@ -54,7 +54,6 @@ public class LevelManager : MonoBehaviour
         }
 
         LoadLevel(nextLevel);
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
     async void LoadLevel(int level)
@@ -71,6 +70,7 @@ public class LevelManager : MonoBehaviour
         while (scene.progress < 0.9f);
 
         scene.allowSceneActivation = true;
+        currentLevel = level;
         OnLevelLoaded?.Invoke();
     }
 }
