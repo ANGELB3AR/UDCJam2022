@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersistentObjects : MonoBehaviour
+public class PersistentObjectSpawner : MonoBehaviour
 {
+    [SerializeField] GameObject[] managers;
+
     void Awake()
     {
         ManageSingleton();
@@ -22,6 +24,14 @@ public class PersistentObjects : MonoBehaviour
         else
         {
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    void Start()
+    {
+        foreach (GameObject manager in managers)
+        {
+            Instantiate(manager);
         }
     }
 }
