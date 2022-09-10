@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameState> OnGameStateChanged;
 
+    [field: SerializeField] public InputReader InputReader { get; private set; }
+    [field: SerializeField] public LevelManager LevelManager { get; private set; }
+    [field: SerializeField] public MenuManager MenuManager { get; private set; }
+    [field: SerializeField] public Health Player { get; private set; } = null;
+    [field: SerializeField] public HUD HUD { get; private set; } = null;
+
     void Awake()
     {
         Instance = this;
@@ -33,32 +39,121 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.Menu:
-                LoadMenu();
+                HandleMainMenu();
                 break;
-            case GameState.Starting:
+            case GameState.Loading:
                 break;
             case GameState.Playing:
+                HandleGamePlaying();
                 break;
             case GameState.Paused:
+                HandleGamePaused();
                 break;
             case GameState.Lose:
+                HandleLevelLost();
                 break;
             case GameState.Win:
+                HandleLevelWon();
                 break;
         }
 
         OnGameStateChanged?.Invoke(newState);
     }
 
-    void LoadMenu()
+    private void HandleLevelWon()
     {
-        
+        Debug.Log("Game Win");
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0;
+    }
+
+    private void HandleGamePlaying()
+    {
+        Debug.Log("Game Playing");
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        Time.timeScale = 1;
+
+        FindTemporaryObjects();
+
+        InputReader.PauseEvent += OnPause;
+        Player.OnDeath += OnPlayerDeath;
+        HUD.OnPlayerWin += OnPlayerWin;
+    }
+
+    private void HandleGamePaused()
+    {
+        Debug.Log("Game Paused");
+
+        InputReader.PauseEvent += OnUnpause;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0;
+    }
+
+    void HandleLevelLost()
+    {
+        Debug.Log("Game Over");
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0;
+    }
+
+    void HandleMainMenu()
+    {
+        Debug.Log("Game Menu");
+
+        LevelManager.LoadMainMenu();
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 1;
+    }
+
+    void OnUnpause()
+    {
+        UpdateGameState(GameState.Playing);
+        InputReader.PauseEvent -= OnUnpause;
+    }
+
+    void OnPause()
+    {
+        UpdateGameState(GameState.Paused);
+        InputReader.PauseEvent -= OnPause;
+    }
+
+    void OnPlayerWin()
+    {
+        UpdateGameState(GameState.Win);
+        HUD.OnPlayerWin -= OnPlayerWin;
+    }
+
+    void OnPlayerDeath()
+    {
+        UpdateGameState(GameState.Lose);
+        Player.OnDeath -= OnPlayerDeath;
+    }
+
+    void FindTemporaryObjects()
+    {
+        Player = FindObjectOfType<PlayerStateMachine>().GetComponent<Health>();
+        HUD = FindObjectOfType<HUD>();
     }
 
     public enum GameState
     {
         Menu,
-        Starting,
+        Loading,
         Playing,
         Paused,
         Lose,
