@@ -821,9 +821,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6126721815387059330, guid: 2d358b7b11d18164b82220c9c9c3f85a, type: 3}
-        m_TargetAssemblyTypeName: GameStateMachine, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: -1770870033305305187, guid: 55488eaea3f2e1f499d47d3da6d76b1e, type: 3}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        LoadLevel(mainMenu);
+        SceneManager.LoadScene(mainMenu);
         currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public async void LoadLevel(int level)
+    async void LoadLevel(int level)
     {
         OnNewLevel?.Invoke();
 

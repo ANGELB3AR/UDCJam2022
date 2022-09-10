@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void OnUnpause()
+    public void OnUnpause()
     {
         UpdateGameState(GameState.Playing);
         InputReader.PauseEvent -= OnUnpause;
