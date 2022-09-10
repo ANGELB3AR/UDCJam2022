@@ -7,13 +7,13 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public event Action OnLevelLoad;
+    public event Action OnNewLevel;
+    public event Action OnLevelLoaded;
 
     [SerializeField] Slider progressBar;
 
     public int currentLevel;
     public int firstLevel = 2;
-    public bool gameLoaded = false;
 
     int mainMenu = 1;
     int lastLevel;
@@ -23,11 +23,6 @@ public class LevelManager : MonoBehaviour
         lastLevel = SceneManager.sceneCountInBuildSettings;
     }
 
-    void Update()
-    {
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
-    }
-
     public void QuitGame()
     {
         Application.Quit();
@@ -35,18 +30,19 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(mainMenu);
+        LoadLevel(mainMenu);
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void StartGame()
     {
         LoadLevel(firstLevel);
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void ReloadLevel()
     {
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentLevel);
+        LoadLevel(currentLevel);
     }
 
     public void LoadNextLevel()
@@ -59,11 +55,14 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        SceneManager.LoadScene(nextLevel);
+        LoadLevel(nextLevel);
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
     public async void LoadLevel(int level)
     {
+        OnNewLevel?.Invoke();
+
         var scene = SceneManager.LoadSceneAsync(level);
         scene.allowSceneActivation = false;
 
@@ -76,5 +75,6 @@ public class LevelManager : MonoBehaviour
         while (scene.progress < 0.9f);
 
         scene.allowSceneActivation = true;
+        OnLevelLoaded?.Invoke();
     }
 }

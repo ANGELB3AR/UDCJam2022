@@ -22,6 +22,16 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        LevelManager.OnNewLevel += OnLevelChange;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.OnNewLevel -= OnLevelChange;
+    }
+
     void Start()
     {
         UpdateGameState(GameState.Menu);
@@ -60,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Loading");
 
-        LevelManager.OnLevelLoad += OnLevelFinishedLoading;
+        LevelManager.OnLevelLoaded += OnLevelFinishedLoading;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -152,10 +162,15 @@ public class GameManager : MonoBehaviour
         Player.OnDeath -= OnPlayerDeath;
     }
 
+    void OnLevelChange()
+    {
+        UpdateGameState(GameState.Loading);
+    }
+
     void OnLevelFinishedLoading()
     {
         UpdateGameState(GameState.Playing);
-        LevelManager.OnLevelLoad -= OnLevelFinishedLoading;
+        LevelManager.OnLevelLoaded -= OnLevelFinishedLoading;
     }
 
     void FindTemporaryObjects()
