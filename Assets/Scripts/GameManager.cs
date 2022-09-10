@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void HandleMainMenu()
+    void HandleMainMenu()
     {
         Debug.Log("Game Menu");
 
