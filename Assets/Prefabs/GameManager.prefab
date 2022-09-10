@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4416024675902051168}
   - component: {fileID: 3708970377800609263}
   - component: {fileID: -8976913879258705980}
-  - component: {fileID: 7051376652012985064}
+  - component: {fileID: -5449265794151274188}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,7 +49,7 @@ MonoBehaviour:
   State: 0
   <InputReader>k__BackingField: {fileID: -8976913879258705980}
   <LevelManager>k__BackingField: {fileID: 0}
-  <MenuManager>k__BackingField: {fileID: 7051376652012985064}
+  <MenuManager>k__BackingField: {fileID: 0}
   <Player>k__BackingField: {fileID: 0}
   <HUD>k__BackingField: {fileID: 0}
 --- !u!114 &-8976913879258705980
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025c6dd2c8a07f145bbbb300ace46b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7051376652012985064
+--- !u!114 &-5449265794151274188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,10 +73,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5392178992383734600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a13ab3e8c118cc34cb3b84add24001ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 68401116b8dd2bc45b94f29314f025bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
-  nextLevelMenu: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  loadingScreen: {fileID: 0}

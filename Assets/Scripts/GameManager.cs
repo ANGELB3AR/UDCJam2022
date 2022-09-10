@@ -40,11 +40,6 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.Menu);
     }
 
-    private void Update()
-    {
-        Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
-    }
-
     public void UpdateGameState(GameState newState)
     {
         State = newState;

@@ -24,9 +24,4 @@ public class PersistentObjects : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
-    private void Update()
-    {
-        Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
-    }
 }
