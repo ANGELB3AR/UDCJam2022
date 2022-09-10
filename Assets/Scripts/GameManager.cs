@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        gameObject.SetActive(true);
         UpdateGameState(GameState.Menu);
     }
 

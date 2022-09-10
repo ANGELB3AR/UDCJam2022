@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
         currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -38,6 +39,8 @@ public class LevelManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
+        Debug.Break();
         StartCoroutine(LoadLevel(firstLevel));
     }
 
@@ -75,12 +78,14 @@ public class LevelManager : MonoBehaviour
     IEnumerator LoadLevel(int level)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
+        asyncLoad.allowSceneActivation = false;
 
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
 
+        asyncLoad.allowSceneActivation = true;
         OnLevelLoaded?.Invoke();
     }
 }

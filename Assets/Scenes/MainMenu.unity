@@ -821,7 +821,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1770870033305305187, guid: 55488eaea3f2e1f499d47d3da6d76b1e, type: 3}
+      - m_Target: {fileID: 5657277288568188696, guid: 740d89df2cc88684db6177b3794dbd37, type: 3}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
