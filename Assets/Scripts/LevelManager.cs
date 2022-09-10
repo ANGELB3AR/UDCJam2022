@@ -21,6 +21,11 @@ public class LevelManager : MonoBehaviour
         lastLevel = SceneManager.sceneCountInBuildSettings;
     }
 
+    void Update()
+    {
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
+    }
+
     public void QuitGame()
     {
         Application.Quit();
@@ -29,13 +34,11 @@ public class LevelManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadSceneAsync(mainMenu);
-        currentLevel = mainMenu;
     }
 
     public void StartGame()
     {
-        LoadLevel(firstLevel);
-        currentLevel = firstLevel;
+        StartCoroutine(LoadLevel(firstLevel));
     }
 
     public void ReloadLevel()
@@ -56,21 +59,28 @@ public class LevelManager : MonoBehaviour
         LoadLevel(nextLevel);
     }
 
-    async void LoadLevel(int level)
+    //async void LoadLevel(int level)
+    //{
+    //    OnNewLevel?.Invoke();
+
+    //    var scene = SceneManager.LoadSceneAsync(level);
+    //    scene.allowSceneActivation = false;
+
+    //    await System.Threading.Tasks.Task.CompletedTask;
+
+    //    scene.allowSceneActivation = true;
+    //    OnLevelLoaded?.Invoke();
+    //}
+
+    IEnumerator LoadLevel(int level)
     {
-        OnNewLevel?.Invoke();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
 
-        var scene = SceneManager.LoadSceneAsync(level);
-        scene.allowSceneActivation = false;
-
-        do
+        while (!asyncLoad.isDone)
         {
-            await System.Threading.Tasks.Task.Delay(100);
+            yield return null;
         }
-        while (scene.progress < 0.9f);
 
-        scene.allowSceneActivation = true;
-        currentLevel = level;
         OnLevelLoaded?.Invoke();
     }
 }

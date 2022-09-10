@@ -25,16 +25,23 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         LevelManager.OnNewLevel += OnLevelChange;
+        LevelManager.OnLevelLoaded += OnLevelFinishedLoading;
     }
 
     private void OnDisable()
     {
         LevelManager.OnNewLevel -= OnLevelChange;
+        LevelManager.OnLevelLoaded -= OnLevelFinishedLoading;
     }
 
     void Start()
     {
         UpdateGameState(GameState.Menu);
+    }
+
+    private void Update()
+    {
+        Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
     }
 
     public void UpdateGameState(GameState newState)
@@ -69,8 +76,6 @@ public class GameManager : MonoBehaviour
     void HandleLoadingLevel()
     {
         Debug.Log("Game Loading");
-
-        LevelManager.OnLevelLoaded += OnLevelFinishedLoading;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -170,7 +175,6 @@ public class GameManager : MonoBehaviour
     void OnLevelFinishedLoading()
     {
         UpdateGameState(GameState.Playing);
-        LevelManager.OnLevelLoaded -= OnLevelFinishedLoading;
     }
 
     void FindTemporaryObjects()
