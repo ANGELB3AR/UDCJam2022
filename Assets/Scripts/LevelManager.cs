@@ -26,6 +26,15 @@ public class LevelManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
+    private void OnDisable()
+    {
+        Debug.Log("DISABLED");
+    }
+    private void OnDestroy()
+    {
+        Debug.Log("DESTROYED");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
