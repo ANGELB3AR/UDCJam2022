@@ -25,6 +25,5 @@ public class MenuManager : MonoBehaviour
         gameOverMenu.SetActive(state == GameManager.GameState.Lose);
         nextLevelMenu.SetActive(state == GameManager.GameState.Win);
         pauseMenu.SetActive(state == GameManager.GameState.Paused);
-        loadingScreen.SetActive(state == GameManager.GameState.Loading);
     }
 }
