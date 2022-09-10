@@ -6,24 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
-    guid: 669e984922ffae346a04fe998d4dd754
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 46586b98af296d34f901a143ce02c21b
+    path: Assets/Scenes/Test.unity
+    guid: 2e6c9ef5bfba65a4c9397edea586fdbc
   - enabled: 1
     path: Assets/Scenes/Relic World.unity
     guid: 3b1ed429afa6acb4a889bda392fae755
-  - enabled: 1
-    path: Assets/Scenes/Forest World.unity
-    guid: ff3e806df1c02c54aa2aae8f711e2968
-  - enabled: 1
-    path: Assets/Scenes/Rocky World.unity
-    guid: 3c9ca7b4a4a6b7d4fa66bf1e6a3480c0
-  - enabled: 1
-    path: Assets/Scenes/Desert World.unity
-    guid: d6178dec24d3f9a4c906402b64320961
-  - enabled: 1
-    path: Assets/Scenes/Molten World.unity
-    guid: b829337330cd3b048b050fd8c73c243d
   m_configObjects: {}

@@ -11,9 +11,9 @@ public class LevelManager : MonoBehaviour
     public event Action OnLevelLoaded;
 
     public int currentLevel;
+    public int mainMenu = 0;
     public int firstLevel = 2;
 
-    int mainMenu = 1;
     int lastLevel;
 
     void Start()

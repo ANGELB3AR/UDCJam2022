@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public static event Action<GameState> OnGameStateChanged;
 
     [field: SerializeField] public InputReader InputReader { get; private set; }
-    [field: SerializeField] public LevelManager LevelManager { get; private set; }
-    [field: SerializeField] public MenuManager MenuManager { get; private set; }
+    [field: SerializeField] public LevelManager LevelManager { get; private set; } = null;
+    [field: SerializeField] public MenuManager MenuManager { get; private set; } = null;
     [field: SerializeField] public Health Player { get; private set; } = null;
     [field: SerializeField] public HUD HUD { get; private set; } = null;
 
