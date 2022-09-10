@@ -10,8 +10,6 @@ public class LevelManager : MonoBehaviour
     public event Action OnNewLevel;
     public event Action OnLevelLoaded;
 
-    [SerializeField] Slider progressBar;
-
     public int currentLevel;
     public int firstLevel = 2;
 
@@ -69,8 +67,6 @@ public class LevelManager : MonoBehaviour
         do
         {
             await System.Threading.Tasks.Task.Delay(100);
-
-            progressBar.value = scene.progress;
         }
         while (scene.progress < 0.9f);
 
