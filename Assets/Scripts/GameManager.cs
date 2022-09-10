@@ -24,13 +24,11 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        LevelManager.OnNewLevel += OnLevelChange;
         LevelManager.OnLevelLoaded += OnLevelFinishedLoading;
     }
 
     private void OnDisable()
     {
-        LevelManager.OnNewLevel -= OnLevelChange;
         LevelManager.OnLevelLoaded -= OnLevelFinishedLoading;
     }
 
@@ -47,9 +45,6 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Menu:
                 HandleMainMenu();
-                break;
-            case GameState.Loading:
-                HandleLoadingLevel();
                 break;
             case GameState.Playing:
                 HandleGamePlaying();
@@ -160,11 +155,6 @@ public class GameManager : MonoBehaviour
     {
         UpdateGameState(GameState.Lose);
         Player.OnDeath -= OnPlayerDeath;
-    }
-
-    void OnLevelChange()
-    {
-        UpdateGameState(GameState.Loading);
     }
 
     void OnLevelFinishedLoading()

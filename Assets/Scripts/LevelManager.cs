@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public event Action OnNewLevel;
     public event Action OnLevelLoaded;
 
     public int currentLevel;
