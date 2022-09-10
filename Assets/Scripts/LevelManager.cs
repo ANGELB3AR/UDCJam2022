@@ -48,6 +48,7 @@ public class LevelManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
+        //Debug.Break();
         StartCoroutine(LoadLevel(firstLevel));
     }
 
