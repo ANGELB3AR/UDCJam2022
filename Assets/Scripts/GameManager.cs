@@ -63,16 +63,6 @@ public class GameManager : MonoBehaviour
         OnGameStateChanged?.Invoke(newState);
     }
 
-    void HandleLoadingLevel()
-    {
-        Debug.Log("Game Loading");
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        Time.timeScale = 1;
-    }
-
     void HandleLevelWon()
     {
         Debug.Log("Game Win");
