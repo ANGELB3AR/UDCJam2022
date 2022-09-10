@@ -58,7 +58,7 @@ public class FMODLoader : MonoBehaviour
         }
 
         // Keep yielding the co-routine until all the Bank loading is done
-        while (FMODUnity.RuntimeManager.AnyBankLoading())
+        while (FMODUnity.RuntimeManager.AnySampleDataLoading())
         {
             yield return null;
         }
