@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadSceneAsync(mainMenu);
+        SceneManager.LoadScene(mainMenu);
     }
 
     public void StartGame()
