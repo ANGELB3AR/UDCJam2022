@@ -49,6 +49,5 @@ public class GameStateMachine : StateMachine
     {
         HUD = FindObjectOfType<HUD>();
         Player = FindObjectOfType<PlayerStateMachine>().GetComponent<Health>();
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
 }
