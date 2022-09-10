@@ -27,11 +27,6 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.Menu);
     }
 
-    void Update()
-    {
-        
-    }
-
     public void UpdateGameState(GameState newState)
     {
         State = newState;
@@ -42,6 +37,7 @@ public class GameManager : MonoBehaviour
                 HandleMainMenu();
                 break;
             case GameState.Loading:
+                HandleLoadingLevel();
                 break;
             case GameState.Playing:
                 HandleGamePlaying();
@@ -60,7 +56,19 @@ public class GameManager : MonoBehaviour
         OnGameStateChanged?.Invoke(newState);
     }
 
-    private void HandleLevelWon()
+    void HandleLoadingLevel()
+    {
+        Debug.Log("Game Loading");
+
+        LevelManager.OnLevelLoad += OnLevelFinishedLoading;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        Time.timeScale = 1;
+    }
+
+    void HandleLevelWon()
     {
         Debug.Log("Game Win");
 
@@ -70,7 +78,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    private void HandleGamePlaying()
+    void HandleGamePlaying()
     {
         Debug.Log("Game Playing");
 
@@ -86,7 +94,7 @@ public class GameManager : MonoBehaviour
         HUD.OnPlayerWin += OnPlayerWin;
     }
 
-    private void HandleGamePaused()
+    void HandleGamePaused()
     {
         Debug.Log("Game Paused");
 
@@ -142,6 +150,12 @@ public class GameManager : MonoBehaviour
     {
         UpdateGameState(GameState.Lose);
         Player.OnDeath -= OnPlayerDeath;
+    }
+
+    void OnLevelFinishedLoading()
+    {
+        UpdateGameState(GameState.Playing);
+        LevelManager.OnLevelLoad -= OnLevelFinishedLoading;
     }
 
     void FindTemporaryObjects()
