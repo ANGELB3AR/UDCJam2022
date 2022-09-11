@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
 
     public void ReloadLevel()
     {
-        LoadLevel(currentLevel);
+        StartCoroutine(LoadLevel(currentLevel));
     }
 
     public void LoadNextLevel()
@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        LoadLevel(nextLevel);
+        StartCoroutine(LoadLevel(nextLevel));
     }
 
     IEnumerator LoadLevel(int level)
