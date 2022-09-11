@@ -50,8 +50,6 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: -8976913879258705980}
   <LevelManager>k__BackingField: {fileID: 0}
   <MenuManager>k__BackingField: {fileID: 0}
-  <Player>k__BackingField: {fileID: 0}
-  <HUD>k__BackingField: {fileID: 0}
 --- !u!114 &-8976913879258705980
 MonoBehaviour:
   m_ObjectHideFlags: 0

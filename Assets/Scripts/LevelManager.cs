@@ -12,26 +12,31 @@ public class LevelManager : MonoBehaviour
     public int currentLevel;
     public int mainMenu = 0;
     public int firstLevel = 2;
+    public int lastLevel = 6;
 
-    int lastLevel;
-
-    void Start()
+    void Awake()
     {
-        lastLevel = SceneManager.sceneCountInBuildSettings;
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        int instanceCount = FindObjectsOfType(GetType()).Length;
+
+        if (instanceCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void Update()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
-    }
-
-    private void OnDisable()
-    {
-        Debug.Log("DISABLED");
-    }
-    private void OnDestroy()
-    {
-        Debug.Log("DESTROYED");
     }
 
     public void QuitGame()
@@ -75,9 +80,7 @@ public class LevelManager : MonoBehaviour
 
         while (asyncLoad.progress < 0.9f)
         {
-            Debug.Log(asyncLoad.progress);
             yield return null;
-            Debug.Log("STUCK HERE");
         }
 
         Debug.Log("Loading complete");

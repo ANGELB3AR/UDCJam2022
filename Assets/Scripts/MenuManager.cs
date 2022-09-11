@@ -9,6 +9,26 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject nextLevelMenu;
     [SerializeField] GameObject pauseMenu;
 
+    void Awake()
+    {
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        int instanceCount = FindObjectsOfType(GetType()).Length;
+
+        if (instanceCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void OnEnable()
     {
         GameManager.OnGameStateChanged += GameManagerOnGameStateChanged;

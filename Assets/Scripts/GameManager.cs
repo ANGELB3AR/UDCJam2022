@@ -14,20 +14,34 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public LevelManager LevelManager { get; private set; } = null;
     [field: SerializeField] public MenuManager MenuManager { get; private set; } = null;
-    [field: SerializeField] public Health Player { get; private set; } = null;
-    [field: SerializeField] public HUD HUD { get; private set; } = null;
 
     void Awake()
     {
         Instance = this;
+        ManageSingleton();
     }
 
-    private void OnEnable()
+    void ManageSingleton()
+    {
+        int instanceCount = FindObjectsOfType(GetType()).Length;
+
+        if (instanceCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    void OnEnable()
     {
         LevelManager.OnLevelLoaded += OnLevelFinishedLoading;
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         LevelManager.OnLevelLoaded -= OnLevelFinishedLoading;
     }
