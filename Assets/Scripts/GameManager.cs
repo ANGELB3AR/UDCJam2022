@@ -82,11 +82,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1;
 
-        FindTemporaryObjects();
-
         InputReader.PauseEvent += OnPause;
-        Player.OnDeath += OnPlayerDeath;
-        HUD.OnPlayerWin += OnPlayerWin;
     }
 
     void HandleGamePaused()
@@ -115,8 +111,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Menu");
 
-        LevelManager.LoadMainMenu();
-
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
@@ -135,27 +129,9 @@ public class GameManager : MonoBehaviour
         InputReader.PauseEvent -= OnPause;
     }
 
-    void OnPlayerWin()
-    {
-        UpdateGameState(GameState.Win);
-        HUD.OnPlayerWin -= OnPlayerWin;
-    }
-
-    void OnPlayerDeath()
-    {
-        UpdateGameState(GameState.Lose);
-        Player.OnDeath -= OnPlayerDeath;
-    }
-
     void OnLevelFinishedLoading()
     {
         UpdateGameState(GameState.Playing);
-    }
-
-    void FindTemporaryObjects()
-    {
-        Player = FindObjectOfType<PlayerStateMachine>().GetComponent<Health>();
-        HUD = FindObjectOfType<HUD>();
     }
 
     public enum GameState

@@ -41,13 +41,12 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        //SceneManager.LoadScene(mainMenu);
+        SceneManager.LoadScene(mainMenu);
+        GameManager.Instance.UpdateGameState(GameManager.GameState.Menu);
     }
 
     public void StartGame()
     {
-        Debug.Log(gameObject.name + " Active? " + gameObject.activeInHierarchy);
-        //Debug.Break();
         StartCoroutine(LoadLevel(firstLevel));
     }
 
@@ -68,19 +67,6 @@ public class LevelManager : MonoBehaviour
 
         LoadLevel(nextLevel);
     }
-
-    //async void LoadLevel(int level)
-    //{
-    //    OnNewLevel?.Invoke();
-
-    //    var scene = SceneManager.LoadSceneAsync(level);
-    //    scene.allowSceneActivation = false;
-
-    //    await System.Threading.Tasks.Task.CompletedTask;
-
-    //    scene.allowSceneActivation = true;
-    //    OnLevelLoaded?.Invoke();
-    //}
 
     IEnumerator LoadLevel(int level)
     {
