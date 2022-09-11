@@ -48,7 +48,7 @@ MonoBehaviour:
   currentLevel: 0
   mainMenu: 1
   firstLevel: 2
-  lastLevel: 6
+  lastLevel: 5
 --- !u!114 &7886511609023386111
 MonoBehaviour:
   m_ObjectHideFlags: 0
