@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(mainMenu);
+        //SceneManager.LoadScene(mainMenu);
     }
 
     public void StartGame()
@@ -87,11 +87,14 @@ public class LevelManager : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
         asyncLoad.allowSceneActivation = false;
 
-        while (!asyncLoad.isDone)
+        while (asyncLoad.progress < 0.9f)
         {
+            Debug.Log(asyncLoad.progress);
             yield return null;
+            Debug.Log("STUCK HERE");
         }
 
+        Debug.Log("Loading complete");
         asyncLoad.allowSceneActivation = true;
         OnLevelLoaded?.Invoke();
     }

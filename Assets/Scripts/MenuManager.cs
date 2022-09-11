@@ -8,7 +8,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject nextLevelMenu;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] GameObject loadingScreen;
 
     void OnEnable()
     {
