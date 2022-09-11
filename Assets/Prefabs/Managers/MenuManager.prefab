@@ -70,6 +70,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3535136764467732113}
     m_Modifications:
+    - target: {fileID: 2150058745395794869, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 2150058745395794869, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
     - target: {fileID: 2150058745432792501, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
       propertyPath: m_Name
       value: NextLevelCanvas
@@ -170,6 +178,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2150058745484036157, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 2150058745484036157, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 2150058745961931255, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 2150058745961931255, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 2150058746450322268, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_text
+      value: Congratulations!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150058746450322268, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_fontSize
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150058746450322268, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c8d184b5a3aca704ab8b489b7268d942, type: 2}
+    - target: {fileID: 2150058746450322268, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150058746450322268, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7932068376769879003, guid: c8d184b5a3aca704ab8b489b7268d942, type: 2}
     - target: {fileID: 2150058746515034808, guid: 9554237877a7b064bba4148f4f884a9b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -201,6 +245,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3535136764467732113}
     m_Modifications:
+    - target: {fileID: 6256072255689441636, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 6256072255689441636, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 6256072256134310062, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 6256072256134310062, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
     - target: {fileID: 6256072256225410342, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
       propertyPath: m_Name
       value: GameOverCanvas
@@ -301,6 +361,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6256072256255587110, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 6256072256255587110, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
     - target: {fileID: 6256072256938196750, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -317,6 +385,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6256072257318618063, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_text
+      value: Thanks for playing!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256072257318618063, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_fontSize
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256072257318618063, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c8d184b5a3aca704ab8b489b7268d942, type: 2}
+    - target: {fileID: 6256072257318618063, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256072257318618063, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7932068376769879003, guid: c8d184b5a3aca704ab8b489b7268d942, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f59abf4a4d6faf489ef94b6bdafb4ff, type: 3}
 --- !u!1 &8778992323970943814 stripped
@@ -340,6 +428,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5734935593863490454, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_text
+      value: Paused
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734935593863490454, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_fontSize
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734935593863490454, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c8d184b5a3aca704ab8b489b7268d942, type: 2}
+    - target: {fileID: 5734935593863490454, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734935593863490454, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7932068376769879003, guid: c8d184b5a3aca704ab8b489b7268d942, type: 2}
     - target: {fileID: 5734935593987385507, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -348,6 +456,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5734935594414827837, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 5734935594414827837, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 5734935594905590655, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 5734935594905590655, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
     - target: {fileID: 5734935594939766131, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -448,6 +572,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5734935595161141495, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
+    - target: {fileID: 5734935595161141495, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8489506755706590099, guid: fb9ff27d6086b824b9bd353da38d97f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77bdac2e0af1804b859496d8f125040, type: 3}
 --- !u!224 &8690354123460657861 stripped
