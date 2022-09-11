@@ -7,10 +7,25 @@ public class HealthBar : MonoBehaviour
 {
     [SerializeField] Slider healthSlider;
 
-    Health health;
+    Health healthComponent;
+
+    void Awake()
+    {
+        healthComponent = GetComponentInParent<Health>();
+    }
 
     void Start()
     {
-        health = GetComponent<Health>();
+        healthSlider.maxValue = healthComponent.maxHealth;
+    }
+
+    void Update()
+    {
+        healthSlider.value = healthComponent.GetCurrentHealth();
+    }
+
+    void LateUpdate()
+    {
+        transform.forward = Camera.main.transform.forward;
     }
 }

@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 
     public bool isInvincible = false;
 
-    [SerializeField] int maxHealth = 50;
+    public int maxHealth = 50;
 
     int currentHealth;
 
