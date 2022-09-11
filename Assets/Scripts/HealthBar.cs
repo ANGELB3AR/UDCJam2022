@@ -23,9 +23,4 @@ public class HealthBar : MonoBehaviour
     {
         healthSlider.value = healthComponent.GetCurrentHealth();
     }
-
-    void LateUpdate()
-    {
-        transform.forward = Camera.main.transform.forward;
-    }
 }
