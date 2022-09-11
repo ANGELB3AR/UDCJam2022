@@ -16,7 +16,7 @@ public class EnemyDyingState : EnemyBaseState
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/BodyDrop", stateMachine.transform.position);
 
-        stateMachine.weaponCollider.enabled = false;
+        stateMachine.WeaponCollider.enabled = false;
 
         stateMachine.HUD.Recount();
     }
