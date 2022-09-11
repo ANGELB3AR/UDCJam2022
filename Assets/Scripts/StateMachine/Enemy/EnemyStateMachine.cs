@@ -20,6 +20,7 @@ public class EnemyStateMachine : StateMachine
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         HUD = FindObjectOfType<HUD>();
+        WeaponCollider = GetComponentInChildren<DamageDealer>().GetComponent<CapsuleCollider>();
     }
 
     void OnEnable()
