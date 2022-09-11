@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8965972379658207775
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.99564654
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08527863
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.03757124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0019861462
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -9.786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 4.334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017976, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017982, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_Name
+      value: Orange Nebula Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017983, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017983, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_Color.g
+      value: 0.39607847
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722235987888017983, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
+      propertyPath: m_Intensity
+      value: 1.25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee57419f497dab94389cba5c2244ba79, type: 3}
