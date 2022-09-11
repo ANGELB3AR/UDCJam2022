@@ -51,8 +51,8 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 0}
   <Gravity>k__BackingField: {fileID: 250272318496174904}
   <Health>k__BackingField: {fileID: 9035473699409790410}
-  <weaponCollider>k__BackingField: {fileID: 0}
-  <AttackRange>k__BackingField: 4
+  <WeaponCollider>k__BackingField: {fileID: 0}
+  <AttackRange>k__BackingField: 5
   <ChaseSpeed>k__BackingField: 5
   <LocomotionSpeed>k__BackingField: 0
   <AttackAnimation>k__BackingField: HeavyAttack
