@@ -19,9 +19,18 @@ public class EnemyDyingState : EnemyBaseState
         stateMachine.WeaponCollider.enabled = false;
 
         stateMachine.HUD.Recount();
+        stateMachine.DisableEnemy();
     }
 
-    public override void Tick(float deltaTime) { }
+    public override void Tick(float deltaTime) 
+    {
+        float normalizedTime = GetNormalizedTime(stateMachine.Animator, "Death");
+
+        if (normalizedTime >= 1f)
+        {
+            stateMachine.DisableEnemy();
+        }
+    }
 
     public override void Exit() { }
 }

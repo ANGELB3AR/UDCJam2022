@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInvincible: 0
-  maxHealth: 50
+  maxHealth: 100
 --- !u!1001 &5766629884487680960
 PrefabInstance:
   m_ObjectHideFlags: 0

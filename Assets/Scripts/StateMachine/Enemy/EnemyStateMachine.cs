@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,7 +38,7 @@ public class EnemyStateMachine : StateMachine
     void OnDisable()
     {
         Health.OnDeath -= HandleDeath;
-        Player.OnDeath += HandlePlayerDeath;
+        Player.OnDeath -= HandlePlayerDeath;
     }
 
     void OnTriggerEnter(Collider other)
@@ -61,5 +62,16 @@ public class EnemyStateMachine : StateMachine
         if (Health.GetCurrentHealth() == 0) { return; }
 
         SwitchState(new EnemyIdleState(this));
+    }
+
+    public void DisableEnemy()
+    {
+        StartCoroutine(WaitAndDisable(1));
+    }
+
+    IEnumerator WaitAndDisable(int time)
+    {
+        yield return new WaitForSeconds(time);
+        gameObject.SetActive(false);
     }
 }
