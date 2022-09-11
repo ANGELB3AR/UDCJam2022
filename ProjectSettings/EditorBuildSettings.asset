@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest World.unity
     guid: ff3e806df1c02c54aa2aae8f711e2968
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rocky World.unity
     guid: 3c9ca7b4a4a6b7d4fa66bf1e6a3480c0
   - enabled: 1
