@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Medium)
       objectReference: {fileID: 0}
+    - target: {fileID: 7564251426295562956, guid: 01863b26699479b4b980dc2be9da59d2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564251426295562956, guid: 01863b26699479b4b980dc2be9da59d2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01863b26699479b4b980dc2be9da59d2, type: 3}
 --- !u!1001 &511741174
@@ -534,6 +542,14 @@ PrefabInstance:
     - target: {fileID: 5748698292115856156, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000000012065576
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132430811479390601, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132430811479390601, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8ca40c4e8971664da5342544f99a18a, type: 3}
