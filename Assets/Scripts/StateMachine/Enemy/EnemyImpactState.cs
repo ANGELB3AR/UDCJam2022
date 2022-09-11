@@ -14,6 +14,8 @@ public class EnemyImpactState : EnemyBaseState
     {
         stateMachine.Animator.CrossFadeInFixedTime(impactHash, crossFadeDuration);
 
+        stateMachine.Health.SetInvincible(true);
+
         FMODUnity.RuntimeManager.PlayOneShot("event:/Hit", stateMachine.transform.position);
     }
 
@@ -25,5 +27,8 @@ public class EnemyImpactState : EnemyBaseState
         }
     }
 
-    public override void Exit() { }
+    public override void Exit() 
+    {
+        stateMachine.Health.SetInvincible(false);
+    }
 }
